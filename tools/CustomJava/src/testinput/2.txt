@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<goodnews>
+ 
+      <to>Yanik</to>
+      <from>ING Bank</from>
+      <date>04/01/2007</date>
+      <amount>$1,000,000.00</amount>
+      <account>0024549Y48K3-843</account>
+      <message>We are pleased to inform you that the above amount was transferred to your bank account</message>
+ 
+</goodnews>
+ 
+ 

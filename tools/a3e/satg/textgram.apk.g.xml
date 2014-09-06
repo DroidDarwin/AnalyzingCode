@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<ActivityGraph>
+<Activity name="com.applovin.sdk.AppLovinBootReceiver" >
+<ChildActivity name="com.applovin.sdk.AppLovinService" encoded_callback="Lcom/applovin/sdk/AppLovinBootReceiver;=&gt;onReceive(Landroid/content/Context;Landroid/content/Intent;)V"/>
+</Activity >
+<Activity name="codeadore.textgram.styling_fragments.StylingHiFragment" >
+<ChildActivity name="codeadore.textgram.CreateTextboxActivity" encoded_callback="Lcodeadore/textgram/styling_fragments/StylingHiFragment$3;=&gt;onClick(Landroid/view/View;)V"/>
+<ChildActivity name="codeadore.textgram.EditTextActivity" encoded_callback="Lcodeadore/textgram/styling_fragments/StylingHiFragment$2;=&gt;onClick(Landroid/view/View;)V"/>
+</Activity >
+<Activity name="codeadore.textgram.ResultActivity" >
+<ChildActivity name="codeadore.textgram.AboutActivity" encoded_callback="Lcodeadore/textgram/ResultActivity$6;=&gt;onClick(Landroid/view/View;)V"/>
+</Activity >
+<Activity name="codeadore.textgram.StylingActivity" >
+<ChildActivity name="codeadore.textgram.ResultActivity" encoded_callback="Lcodeadore/textgram/StylingActivity$7;=&gt;onClick(Landroid/view/View;)V"/>
+</Activity >
+<Activity name="codeadore.textgram.MainActivity" >
+<ChildActivity name="codeadore.textgram.StoreActivity" encoded_callback="Lcodeadore/textgram/MainActivity$3;=&gt;onClick(Landroid/view/View;)V"/>
+<ChildActivity name="codeadore.textgram.StylingActivity" encoded_callback="Lcodeadore/textgram/MainActivity;=&gt;goNext()V"/>
+</Activity >
+<Activity name="codeadore.textgram.SuperSurface" >
+<ChildActivity name="codeadore.textgram.EditTextActivity" encoded_callback="Lcodeadore/textgram/SuperSurface$1DoubleTapGestureDetector;=&gt;onDoubleTap(Landroid/view/MotionEvent;)Z"/>
+</Activity >
+<Activity name="codeadore.textgram.el7rUtilities" >
+<ChildActivity name="codeadore.textgram.StoreItemActivity" encoded_callback="Lcodeadore/textgram/el7rUtilities$3;=&gt;onPageStarted(Landroid/webkit/WebView;Ljava/lang/String;Landroid/graphics/Bitmap;)V"/>
+</Activity >
+<Activity name="codeadore.textgram.styling_fragments.StylingImagesFragment" >
+<ChildActivity name="codeadore.textgram.StoreActivity" encoded_callback="Lcodeadore/textgram/styling_fragments/StylingImagesFragment$6$3;=&gt;onClick(Landroid/content/DialogInterface;I)V"/>
+<ChildActivity name="codeadore.textgram.StoreActivity" encoded_callback="Lcodeadore/textgram/styling_fragments/StylingImagesFragment;=&gt;gvItemClicked(Ljava/lang/String;Landroid/view/View;I)V"/>
+</Activity >
+<Activity name="codeadore.textgram.StoreActivity" >
+<ChildActivity name="codeadore.textgram.StoreItemActivity" encoded_callback="Lcodeadore/textgram/StoreActivity;=&gt;viewItem(Ljava/lang/String;)V"/>
+</Activity >
+<Activity name="codeadore.textgram.Utilities" >
+<ChildActivity name="codeadore.textgram.ResultActivity" encoded_callback="Lcodeadore/textgram/Utilities;=&gt;optionsMenuAction(Landroid/view/MenuItem;Landroid/app/Activity;Ljava/lang/String;)V"/>
+<ChildActivity name="codeadore.textgram.AboutActivity" encoded_callback="Lcodeadore/textgram/Utilities;=&gt;optionsMenuAction(Landroid/view/MenuItem;Landroid/app/Activity;Ljava/lang/String;)V"/>
+<ChildActivity name="codeadore.textgram.RAppsActivity" encoded_callback="Lcodeadore/textgram/Utilities;=&gt;optionsMenuAction(Landroid/view/MenuItem;Landroid/app/Activity;Ljava/lang/String;)V"/>
+<ChildActivity name="codeadore.textgram.StoreActivity" encoded_callback="Lcodeadore/textgram/Utilities;=&gt;optionsMenuAction(Landroid/view/MenuItem;Landroid/app/Activity;Ljava/lang/String;)V"/>
+<ChildActivity name="codeadore.textgram.GoProActivity" encoded_callback="Lcodeadore/textgram/Utilities;=&gt;optionsMenuAction(Landroid/view/MenuItem;Landroid/app/Activity;Ljava/lang/String;)V"/>
+<ChildActivity name="codeadore.textgram.SettingsActivity" encoded_callback="Lcodeadore/textgram/Utilities;=&gt;optionsMenuAction(Landroid/view/MenuItem;Landroid/app/Activity;Ljava/lang/String;)V"/>
+</Activity >
+<Activity name="com.google.ads.util.AdUtil" >
+<ChildActivity name="com.google.ads.AdActivity" encoded_callback="Lcom/google/ads/util/AdUtil;=&gt;c(Landroid/content/Context;)Z"/>
+</Activity >
+<Activity name="com.applovin.impl.adview.aj" >
+<ChildActivity name="com.applovin.adview.AppLovinInterstitialActivity" encoded_callback="Lcom/applovin/impl/adview/aj;=&gt;i()V"/>
+</Activity >
+</ActivityGraph>

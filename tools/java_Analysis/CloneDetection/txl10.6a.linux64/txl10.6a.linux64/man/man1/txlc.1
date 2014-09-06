@@ -1,0 +1,93 @@
+.TH TXLC 1 "5 July 2012"
+.DA 5 Jul 2012
+.SH NAME
+txlc \- 
+TXL Programming Language Compiler (Version 10.6)
+.SH SYNOPSIS
+.na
+.B txlc 
+[ 
+.IR txloptions
+]
+.IR txlfile
+.ad
+.SH DESCRIPTION
+The
+.IR `txlc'
+command provides a convenient interface for compiling a TXL program to a standalone 
+executable which can be distributed and executed independently of TXL.  
+The single command argument 
+.IR `program.Txl' 
+is the TXL program to be compiled.  
+The TXL program file must be named ending in the suffix 
+.IR `.Txl' and must be either in the current working directory, 
+in the 
+.IR ./Txl 
+subdirectory of the current directory, 
+or in the system TXL library (e.g., 
+.IR /usr/local/lib/txl
+or
+.IR C:/windows/txl
+).
+.PP
+.IR txlc 
+uses the TXL compiler/interpreter (see 
+.IR txl (1)
+) to compile the program to a TXL virtual machine byte code file, 
+and then runs the TXL byte code converter to produce a C program that 
+is compiled and linked with the TXL virtual machine to produce the output
+file 
+.IR filename.x
+or 
+.IR filename.exe, 
+a standalone executable program.
+.IR txlc
+requires that the command line C compiler and linker
+(normally 
+.IR cc (1) 
+or 
+.IR gcc (1)
+on Unix and Linux systems, 
+.IR xlc (1)
+on AIX, and the 
+.IR MS Visual C++ 6.0 
+command line tools on Windows) are installed and available in the current command line environment. 
+.PP
+All TXL information and error messages from the compile are sent to the terminal via the standard error stream (
+.IR /dev/stderr
+or
+.IR CONERR$
+).
+.SH OPTIONS
+Command line options of the 
+.IR txlc
+command are identical to those for
+.IR txl (1).
+.SH FILES
+.nf
+filename.Txl			input TXL program to be compiled (txlfile)
+filename.CTxl			intermediate TXL virtual machine byte code 
+filename_TXL.c			intermediate C code 
+filename.x			output executable program
+./Txl				user TXL program library
+/usr/local/lib/txl		system TXL program library
+.fi
+.SH BUGS
+Bugs should be reported using the support page on the TXL website, http://www.txl.ca .
+.SH "SEE ALSO"
+.IR txl (1),
+``The TXL Programming Language, version 10.6'',
+``User's Guide to the TXL Compiler/Interpreter, version 10.6''.
+.SH AUTHORS
+Version 10.6 of TXL was designed and implemented by J.R. Cordy
+at Queen's University, Legasys Corp. and TXL Software Research Inc. 
+between 1994 and 2012.
+.PP
+TXL was originally designed by J.R. Cordy and C.D. Halpern-Hamu
+at the University of Toronto in 1985, and was originally implemented by
+J.R. Cordy, E.M. Promislow and I.H. Carmichael at Queen's University 
+between 1986 and 1988.  Version 7 was completely redesigned 
+and implemented by J.R. Cordy and A. Malton at Queen's University in 1992,
+and Version 10 was redesigned from the ground up by J.R. Cordy in 2001.
+.SH COPYRIGHT
+Copyright 2012 Queen's University at Kingston and James R. Cordy.

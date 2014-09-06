@@ -1,0 +1,10 @@
+
+./txl/java-extract-functions.x -s 400 ALL.java >> output//c7318615-8910-4b65-9aa9-3dce4eca998b/functions.xml
+
+Wed Jun  4 04:08:00 UTC 2014
+
+Wed Jun  4 04:08:00 UTC 2014
+./tools/streamprocess.x './txl/java-rename-consistent-functions.x stdin' < output//c7318615-8910-4b65-9aa9-3dce4eca998b/functions.xml > output//c7318615-8910-4b65-9aa9-3dce4eca998b/functions-consistent.xml
+
+Wed Jun  4 04:08:00 UTC 2014
+

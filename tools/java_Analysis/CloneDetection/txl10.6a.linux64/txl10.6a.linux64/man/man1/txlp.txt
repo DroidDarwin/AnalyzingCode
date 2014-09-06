@@ -1,0 +1,91 @@
+TXLP(1)                                                                TXLP(1)
+
+
+
+NAME
+       txlp − TXL Programming Language Profiler (Version 10.6)
+
+SYNOPSIS
+       txlp [ profoptions ] [ txloptions ] inputfile [ txlfile ] [ ‐ userop‐
+       tions ]
+       txlp profoptions
+
+DESCRIPTION
+       The ‘txlp’ command provides a convenient interface  for  profiling  the
+       grammar  and  transformation  rules of a TXL program for a given input.
+       The command line format is identical to the txl command  ‐  see  txl(1)
+       for  details.   ‘txlp’ compiles, loads and executes the the TXL program
+       using a special profiling version of the TXL interpreter,  and  outputs
+       the  result  profile  to the terminal on the standard error stream.  By
+       default, a profile of the rule set is output, sorted by cumulative time
+       spent  executing  each rule and its subrules.  Using the ‐parse command
+       line option, a profile of the grammar in parsing the  input  is  output
+       instead.   Options  allow sorting of the profile output by time, space,
+       number of search cycles, or parse efficiency.
+
+       When run with profiling options only  (e.g.,  txlp‐space  ),  txlp  re‐
+       interprets the results of the previous txlp run as indicated by the new
+       profiling options.  This is done by re‐reading  the  raw  profile  data
+       stored in the files ‘txl.pprofout’ and ‘txl.rprofout’ which are created
+       by txlp when it is first run.
+
+OPTIONS
+       The following profiling options are recognized  by  the  txlp  command.
+       Other command line options are as described for the txl(1) command.
+
+       −parse    Output a grammar parsing profile rather than the default rule
+                 transformation profile.
+
+       −time     Sort the profile by the most cumulative time per rule or non‐
+                 terminal (default).
+
+       −space    Sort  the  profile by the most cumulative space used per rule
+                 or nonterminal.
+
+       −calls    Sort the profile by the most invocations per rule or  nonter‐
+                 minal.
+
+       −cycles   Sort  the profile by the most search/match cycles per rule or
+                 most parse cycles per nonterminal.
+
+       −eff      Sort the profile by the least parse efficiency per  nontermi‐
+                 nal.  Must be used with ‐parse.
+
+       −percall  Show  average  time,  space and cycles per rule invocation or
+                 nonterminal call.
+
+FILES
+       inputfile           the input to be transformed
+       txlfile                  the TXL program to transform it
+       txl.pprofout             parser profile raw data file
+       txl.rprofout             transformer profile raw data file
+       /usr/local/lib/txl       system TXL program library
+       /usr/local/lib/txl/txlpf.x    TXL profile generator
+       /usr/local/lib/txl/txlapr.x   TXL profile analyzer
+
+BUGS
+       Bugs should be reported using the support  page  on  the  TXL  website,
+       http://www.txl.ca .
+
+SEE ALSO
+       txl(1),  ‘‘The TXL Programming Language, version 10.6’’, ‘‘User’s Guide
+       to the TXL Compiler/Interpreter, version 10.6’’.
+
+AUTHORS
+       Version 10.6 of TXL was designed  and  implemented  by  J.R.  Cordy  at
+       Queen’s  University,  Legasys  Corp.  and  TXL  Software  Research Inc.
+       between 1994 and 2012.
+
+       TXL was originally designed by J.R. Cordy and C.D. Halpern‐Hamu at  the
+       University  of  Toronto in 1985, and was originally implemented by J.R.
+       Cordy, E.M. Promislow and I.H. Carmichael at Queen’s University between
+       1986  and 1988.  Version 7 was completely redesigned and implemented by
+       J.R. Cordy and A. Malton at Queen’s University in 1992, and Version  10
+       was redesigned from the ground up by J.R. Cordy in 2001.
+
+COPYRIGHT
+       Copyright 2012 Queen’s University at Kingston and James R. Cordy.
+
+
+
+                                  5 July 2012                          TXLP(1)

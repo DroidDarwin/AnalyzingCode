@@ -1,0 +1,31 @@
+Verification completed: 0 reported messages.
+./test3/java/io/PushbackReader.java:97: Inequality comparison can be replaced with equality comparison.
+Verification completed: 1 reported messages.
+./test3/java/io/RandomAccessFile.java:523: Zero operand for << operation.
+./test3/java/io/RandomAccessFile.java:551: Zero operand for << operation.
+./test3/java/io/RandomAccessFile.java:578: Zero operand for << operation.
+./test3/java/io/RandomAccessFile.java:608: Zero operand for << operation.
+./test3/java/io/RandomAccessFile.java:806: Zero operand for >>> operation.
+./test3/java/io/RandomAccessFile.java:820: Zero operand for >>> operation.
+./test3/java/io/RandomAccessFile.java:835: Zero operand for >>> operation.
+./test3/java/io/RandomAccessFile.java:851: Data can be lost as a result of truncation to int.
+./test3/java/io/RandomAccessFile.java:852: Data can be lost as a result of truncation to int.
+./test3/java/io/RandomAccessFile.java:853: Data can be lost as a result of truncation to int.
+./test3/java/io/RandomAccessFile.java:854: Zero operand for >>> operation.
+./test3/java/io/RandomAccessFile.java:922: Zero operand for >>> operation.
+java/lang/String.java:1: equals() was overridden but not hashCode().
+Verification completed: 13 reported messages.
+Verification completed: 0 reported messages.
+Verification completed: 0 reported messages.
+Verification completed: 0 reported messages.
+Verification completed: 0 reported messages.
+Verification completed: 0 reported messages.
+Verification completed: 0 reported messages.
+Verification completed: 0 reported messages.
+Verification completed: 0 reported messages.
+Verification completed: 0 reported messages.
+Verification completed: 0 reported messages.
+Verification completed: 0 reported messages.
+Verification completed: 0 reported messages.
+Verification completed: 0 reported messages.
+Verification completed: 0 reported messages.

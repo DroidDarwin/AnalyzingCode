@@ -1,0 +1,211 @@
+<clones>
+<systeminfo processor="nicad3" system="_" granularity="unctions" threshold="30%" minlines="10" maxlines="2500"/>
+<cloneinfo npcs="2886" npairs="41"/>
+<runinfo ncompares="39527" cputime="120000"/>
+
+<clone nlines="42" similarity="71">
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/contrib/MDIDesktopPane.java" startline="417" endline="470" pcid="595"></source>
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/contrib/MDIDesktopPane.java" startline="477" endline="529" pcid="596"></source>
+</clone>
+
+<clone nlines="20" similarity="75">
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/contrib/MDIDesktopPane.java" startline="386" endline="410" pcid="594"></source>
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/contrib/MDIDesktopPane.java" startline="359" endline="384" pcid="593"></source>
+</clone>
+
+<clone nlines="20" similarity="75">
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/contrib/zoom/ZoomDrawingView.java" startline="230" endline="251" pcid="967"></source>
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/contrib/zoom/ZoomDrawingView.java" startline="201" endline="223" pcid="966"></source>
+</clone>
+
+<clone nlines="19" similarity="94">
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/samples/nothing/NothingApp.java" startline="37" endline="63" pcid="1555"></source>
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/samples/nothing/NothingApplet.java" startline="28" endline="54" pcid="1557"></source>
+</clone>
+
+<clone nlines="18" similarity="94">
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/standard/ConnectionHandle.java" startline="74" endline="93" pcid="1923"></source>
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/standard/ChangeConnectionHandle.java" startline="92" endline="111" pcid="1843"></source>
+</clone>
+
+<clone nlines="17" similarity="76">
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/figures/ConnectedTextTool.java" startline="102" endline="124" pcid="1067"></source>
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/figures/ConnectedTextTool.java" startline="130" endline="151" pcid="1068"></source>
+</clone>
+
+<clone nlines="17" similarity="76">
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/contrib/CompositeFigureCreationTool.java" startline="34" endline="52" pcid="185"></source>
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/contrib/NestedCreationTool.java" startline="32" endline="47" pcid="632"></source>
+</clone>
+
+<clone nlines="15" similarity="86">
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/contrib/MDIDesktopPane.java" startline="152" endline="165" pcid="580"></source>
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/contrib/MDIDesktopPane.java" startline="137" endline="150" pcid="579"></source>
+</clone>
+
+<clone nlines="15" similarity="86">
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/contrib/MDIDesktopPane.java" startline="152" endline="165" pcid="580"></source>
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/contrib/MDIDesktopPane.java" startline="122" endline="135" pcid="578"></source>
+</clone>
+
+<clone nlines="15" similarity="86">
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/contrib/MDIDesktopPane.java" startline="137" endline="150" pcid="579"></source>
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/contrib/MDIDesktopPane.java" startline="122" endline="135" pcid="578"></source>
+</clone>
+
+<clone nlines="14" similarity="71">
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/standard/CompositeFigure.java" startline="490" endline="504" pcid="1903"></source>
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/standard/CompositeFigure.java" startline="469" endline="482" pcid="1902"></source>
+</clone>
+
+<clone nlines="14" similarity="78">
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/contrib/MDIDesktopPane.java" startline="277" endline="289" pcid="588"></source>
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/contrib/DesktopEventService.java" startline="130" endline="141" pcid="261"></source>
+</clone>
+
+<clone nlines="14" similarity="78">
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/standard/StandardDrawingView.java" startline="673" endline="686" pcid="2355"></source>
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/standard/StandardDrawingView.java" startline="694" endline="707" pcid="2356"></source>
+</clone>
+
+<clone nlines="14" similarity="85">
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/contrib/html/ResourceContentProducer.java" startline="62" endline="79" pcid="489"></source>
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/contrib/html/URLContentProducer.java" startline="66" endline="83" pcid="529"></source>
+</clone>
+
+<clone nlines="13" similarity="76">
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/standard/ConnectionTool.java" startline="396" endline="412" pcid="1963"></source>
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/standard/PasteCommand.java" startline="88" endline="102" pcid="2210"></source>
+</clone>
+
+<clone nlines="13" similarity="76">
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/standard/AlignCommand.java" startline="161" endline="177" pcid="1765"></source>
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/standard/ChangeAttributeCommand.java" startline="79" endline="93" pcid="1821"></source>
+</clone>
+
+<clone nlines="13" similarity="76">
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/standard/ChangeAttributeCommand.java" startline="79" endline="93" pcid="1821"></source>
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/figures/ConnectedTextTool.java" startline="173" endline="187" pcid="1072"></source>
+</clone>
+
+<clone nlines="13" similarity="76">
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/figures/ConnectedTextTool.java" startline="189" endline="203" pcid="1073"></source>
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/figures/ConnectedTextTool.java" startline="173" endline="187" pcid="1072"></source>
+</clone>
+
+<clone nlines="13" similarity="76">
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/figures/ConnectedTextTool.java" startline="173" endline="187" pcid="1072"></source>
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/standard/SendToBackCommand.java" startline="64" endline="77" pcid="2278"></source>
+</clone>
+
+<clone nlines="12" similarity="75">
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/standard/SendToBackCommand.java" startline="64" endline="77" pcid="2278"></source>
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/standard/PasteCommand.java" startline="88" endline="102" pcid="2210"></source>
+</clone>
+
+<clone nlines="12" similarity="83">
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/contrib/DesktopEventService.java" startline="84" endline="94" pcid="257"></source>
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/contrib/DesktopEventService.java" startline="96" endline="106" pcid="258"></source>
+</clone>
+
+<clone nlines="12" similarity="75">
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/contrib/DesktopEventService.java" startline="84" endline="94" pcid="257"></source>
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/contrib/DesktopEventService.java" startline="111" endline="121" pcid="259"></source>
+</clone>
+
+<clone nlines="12" similarity="75">
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/contrib/DesktopEventService.java" startline="96" endline="106" pcid="258"></source>
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/contrib/DesktopEventService.java" startline="111" endline="121" pcid="259"></source>
+</clone>
+
+<clone nlines="12" similarity="83">
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/contrib/PolygonHandle.java" startline="83" endline="96" pcid="682"></source>
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/figures/PolyLineHandle.java" startline="97" endline="108" pcid="1282"></source>
+</clone>
+
+<clone nlines="12" similarity="75">
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/standard/ChangeConnectionHandle.java" startline="174" endline="185" pcid="1848"></source>
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/standard/ConnectionHandle.java" startline="142" endline="152" pcid="1928"></source>
+</clone>
+
+<clone nlines="11" similarity="81">
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/application/DrawApplication.java" startline="808" endline="817" pcid="115"></source>
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/application/DrawApplication.java" startline="819" endline="828" pcid="116"></source>
+</clone>
+
+<clone nlines="11" similarity="81">
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/application/DrawApplication.java" startline="808" endline="817" pcid="115"></source>
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/application/DrawApplication.java" startline="830" endline="839" pcid="117"></source>
+</clone>
+
+<clone nlines="11" similarity="72">
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/standard/CompositeFigure.java" startline="277" endline="289" pcid="1888"></source>
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/standard/CompositeFigure.java" startline="291" endline="301" pcid="1889"></source>
+</clone>
+
+<clone nlines="11" similarity="72">
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/standard/CompositeFigure.java" startline="448" endline="458" pcid="1901"></source>
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/standard/CompositeFigure.java" startline="434" endline="443" pcid="1900"></source>
+</clone>
+
+<clone nlines="11" similarity="81">
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/application/DrawApplication.java" startline="819" endline="828" pcid="116"></source>
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/application/DrawApplication.java" startline="830" endline="839" pcid="117"></source>
+</clone>
+
+<clone nlines="11" similarity="81">
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/samples/pert/PertApplet.java" startline="27" endline="41" pcid="1558"></source>
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/samples/pert/PertApplication.java" startline="31" endline="49" pcid="1560"></source>
+</clone>
+
+<clone nlines="11" similarity="72">
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/contrib/MDIDesktopPane.java" startline="259" endline="268" pcid="586"></source>
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/contrib/SplitPaneDesktop.java" startline="105" endline="113" pcid="735"></source>
+</clone>
+
+<clone nlines="10" similarity="90">
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/contrib/DesktopEventService.java" startline="62" endline="70" pcid="253"></source>
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/contrib/SplitPaneDesktop.java" startline="105" endline="113" pcid="735"></source>
+</clone>
+
+<clone nlines="10" similarity="100">
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/contrib/CTXCommandMenu.java" startline="116" endline="124" pcid="199"></source>
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/util/CommandMenu.java" startline="82" endline="90" pcid="2576"></source>
+</clone>
+
+<clone nlines="10" similarity="80">
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/standard/SendToBackCommand.java" startline="35" endline="44" pcid="2274"></source>
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/standard/ChangeAttributeCommand.java" startline="43" endline="52" pcid="1817"></source>
+</clone>
+
+<clone nlines="10" similarity="80">
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/standard/SendToBackCommand.java" startline="35" endline="44" pcid="2274"></source>
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/standard/BringToFrontCommand.java" startline="35" endline="44" pcid="1810"></source>
+</clone>
+
+<clone nlines="10" similarity="90">
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/standard/ConnectionTool.java" startline="314" endline="324" pcid="1950"></source>
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/standard/ConnectionHandle.java" startline="142" endline="152" pcid="1928"></source>
+</clone>
+
+<clone nlines="10" similarity="90">
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/standard/ChangeAttributeCommand.java" startline="43" endline="52" pcid="1817"></source>
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/standard/BringToFrontCommand.java" startline="35" endline="44" pcid="1810"></source>
+</clone>
+
+<clone nlines="10" similarity="80">
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/contrib/zoom/ScalingGraphics.java" startline="265" endline="274" pcid="926"></source>
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/contrib/zoom/ScalingGraphics.java" startline="254" endline="263" pcid="925"></source>
+</clone>
+
+<clone nlines="10" similarity="80">
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/contrib/zoom/ScalingGraphics.java" startline="265" endline="274" pcid="926"></source>
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/contrib/zoom/ScalingGraphics.java" startline="243" endline="252" pcid="924"></source>
+</clone>
+
+<clone nlines="10" similarity="80">
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/contrib/zoom/ScalingGraphics.java" startline="254" endline="263" pcid="925"></source>
+<source file="examples/JHotDraw54b1/src/CH/ifa/draw/contrib/zoom/ScalingGraphics.java" startline="243" endline="252" pcid="924"></source>
+</clone>
+
+</clones>

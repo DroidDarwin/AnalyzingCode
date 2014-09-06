@@ -1,0 +1,91 @@
+#!/bin/sh
+# FreeTXL Application Compiler
+
+# Where's FreeTXL?
+TXLLIB=/usr/local/lib/txl
+
+# Check we have arguments
+if [ "$1" = "" ]
+then
+    echo "Usage:  txlc [txloptions] txlfile" 1>&2
+    exit 99
+fi
+
+# Localization
+CC="gcc -m64"
+
+# Decode TXL program name and options
+TXLPROG=""
+TXLOPTIONS=""
+while [ "$1" != "" ]
+do
+    case "$1" in
+	*.[Tt]xl)
+		TXLPROG="$1"
+		;;
+	-help)
+		echo "Usage:  txlc [txloptions] txlfile" 1>&2
+		echo "('txl -help' for TXL options)" 1>&2
+		exit 99
+		;;
+	*) 
+		TXLOPTIONS="$TXLOPTIONS $1"
+		;;
+    esac
+    shift
+done
+
+# Find our source file
+if [ "$TXLPROG" = "" ]
+then
+    echo "Usage:  txlc [txloptions] txlfile" 1>&2
+    exit 99
+fi
+
+# Check that we can read the TXL source file
+if [ ! -r $TXLPROG -a ! -r Txl/$TXLPROG ]
+then 
+    echo "Unable to open $TXLPROG" 1>&2
+    exit 99
+fi
+
+# Handle both naming conventions
+TXLNAME=`basename $TXLPROG .Txl`
+TXLNAME=`basename $TXLNAME .txl`
+
+# Compile to TXLVM byte code using TXL 
+/bin/rm -f $TXLNAME.CTxl Txl/$TXLNAME.CTxl $TXLNAME.ctxl Txl/$TXLNAME.ctxl
+txl -q -c $TXLPROG $TXLOPTIONS
+
+# Check that we got a result
+if [ ! -r $TXLNAME.CTxl -a ! -r $TXLNAME.ctxl ]
+then
+    if [ -r Txl/$TXLNAME.CTxl ]
+    then
+	/bin/mv Txl/$TXLNAME.CTxl $TXLNAME.CTxl
+    else 
+	if [ -r Txl/$TXLNAME.ctxl ]
+	then
+	    /bin/mv Txl/$TXLNAME.ctxl $TXLNAME.ctxl
+	else
+	    echo "TXL compile failed" 1>&2
+	    exit 99
+	fi
+    fi
+fi
+
+# Convert TXLVM byte code to initialized C byte array
+if [ -r $TXLNAME.CTxl ]
+then
+    $TXLLIB/txlcvt.x $TXLNAME.CTxl
+else
+    $TXLLIB/txlcvt.x $TXLNAME.ctxl
+fi
+
+# Compile and link with TXLVM
+$CC -O -o $TXLNAME.x $TXLLIB/txlmain.o $TXLLIB/txlvm.o  ${TXLNAME}_TXL.c
+
+# Clean up
+/bin/rm -f $TXLNAME.CTxl Txl/$TXLNAME.CTxl $TXLNAME.ctxl Txl/$TXLNAME.ctxl ${TXLNAME}_TXL.*
+
+# Revised 1.7.10

@@ -1,0 +1,123 @@
+.TH TXLP 1 "5 July 2012"
+.DA 5 Jul 2012
+.SH NAME
+txlp \- 
+TXL Programming Language Profiler (Version 10.6)
+.SH SYNOPSIS
+.na
+.B txlp 
+[ 
+.IR profoptions
+]
+[ 
+.IR txloptions
+]
+.IR inputfile
+[
+.IR txlfile
+]
+[
+.IR "- useroptions"
+]
+.ad
+.br
+.na
+.B txlp 
+.IR profoptions
+.ad
+.SH DESCRIPTION
+The
+.IR `txlp'
+command provides a convenient interface for profiling the grammar and transformation 
+rules of a TXL program for a given input.
+The command line format is identical to the
+.IR txl
+command - see 
+.IR txl (1)
+for details.
+.IR `txlp'
+compiles, loads and executes the the TXL program using a special profiling version 
+of the TXL interpreter, and outputs the result profile to the terminal on the standard 
+error stream.  
+By default, a profile of the rule set is output, sorted by cumulative 
+time spent executing each rule and its subrules.  
+Using the  
+.IR -parse 
+command line option, a profile of the grammar in parsing the input is output instead.  
+Options allow sorting of the profile output by time, space, number of search cycles, 
+or parse efficiency.
+.PP
+When run with profiling options only (e.g., 
+.IR txlp -space
+), 
+.IR txlp  
+re-interprets the results of the previous 
+.IR txlp 
+run as indicated by the new profiling options.  
+This is done by re-reading the raw profile data stored in the files 
+.IR `txl.pprofout' 
+and 
+.IR `txl.rprofout' 
+which are created by 
+.IR txlp 
+when it is first run.
+.SH OPTIONS
+The following profiling options are recognized by the
+.IR txlp
+command.
+Other command line options are as described for the
+.IR txl (1)
+command.
+.TP 10
+\fI\-parse\fR            
+Output a grammar parsing profile rather than the default rule transformation profile.
+.TP 10
+\fI\-time\fR          
+Sort the profile by the most cumulative time per rule or nonterminal (default).
+.TP 10
+\fI\-space\fR          
+Sort the profile by the most cumulative space used per rule or nonterminal.
+.TP 10
+\fI\-calls\fR          
+Sort the profile by the most invocations per rule or nonterminal.
+.TP 10
+\fI\-cycles\fR          
+Sort the profile by the most search/match cycles per rule or most parse cycles per nonterminal.
+.TP 10
+\fI\-eff\fR          
+Sort the profile by the least parse efficiency per nonterminal.
+Must be used with
+.IR -parse.
+.TP 10
+\fI\-percall\fR            
+Show average time, space and cycles per rule invocation or nonterminal call.
+.SH FILES
+.nf
+inputfile			the input to be transformed
+txlfile				the TXL program to transform it
+txl.pprofout			parser profile raw data file
+txl.rprofout			transformer profile raw data file
+./Txl				user TXL program library
+/usr/local/lib/txl		system TXL program library
+/usr/local/lib/txl/txlpf.x	TXL profile generator
+/usr/local/lib/txl/txlapr.x	TXL profile analyzer
+.fi
+.SH BUGS
+Bugs should be reported using the support page on the TXL website, http://www.txl.ca .
+.SH "SEE ALSO"
+.IR txl (1),
+``The TXL Programming Language, version 10.6'',
+``User's Guide to the TXL Compiler/Interpreter, version 10.6''.
+.SH AUTHORS
+Version 10.6 of TXL was designed and implemented by J.R. Cordy
+at Queen's University, Legasys Corp. and TXL Software Research Inc. 
+between 1994 and 2012.
+.PP
+TXL was originally designed by J.R. Cordy and C.D. Halpern-Hamu
+at the University of Toronto in 1985, and was originally implemented by
+J.R. Cordy, E.M. Promislow and I.H. Carmichael at Queen's University 
+between 1986 and 1988.  Version 7 was completely redesigned 
+and implemented by J.R. Cordy and A. Malton at Queen's University in 1992,
+and Version 10 was redesigned from the ground up by J.R. Cordy in 2001.
+.SH COPYRIGHT
+Copyright 2012 Queen's University at Kingston and James R. Cordy.

@@ -1,0 +1,13 @@
+This document describes how to start the cronjob on the server.
+
+##### Not working for some reason
+
+### Useful website
+http://www.thesitewizard.com/general/set-cron-job.shtml
+
+
+
+### Useful commands
+
+crontab crontab.txt
+crontab -l

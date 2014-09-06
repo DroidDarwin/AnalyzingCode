@@ -1,0 +1,24 @@
+../../scraper/downloads/full/9bb13797-696e-4f1a-b393-227e40679ff1.apk
+	RedFlags
+		DEX {'NATIVE': 1, 'DYNAMIC': 1, 'CRYPTO': 0, 'REFLECTION': 1}
+		APK {'DEX': 0, 'EXECUTABLE': 0, 'ZIP': 0, 'SHELL_SCRIPT': 0, 'APK': 0, 'SHARED LIBRARIES': 0}
+		PERM {'PRIVACY': 11, 'NORMAL': 9, 'MONEY': 2, 'INTERNET': 1, 'SMS': 5, 'DANGEROUS': 16, 'SIGNATUREORSYSTEM': 0, 'CALL': 0, 'SIGNATURE': 1, 'GPS': 2}
+	FuzzyRisk
+		VALUE 86.6666666667
+./androguard.sh: line 77: ./androapkinfo.py: Permission denied
+../../scraper/downloads/full/9bb13797-696e-4f1a-b393-227e40679ff1.apk
+	RedFlags
+		DEX {'NATIVE': 1, 'DYNAMIC': 1, 'CRYPTO': 0, 'REFLECTION': 1}
+		APK {'DEX': 0, 'EXECUTABLE': 0, 'ZIP': 0, 'SHELL_SCRIPT': 0, 'APK': 0, 'SHARED LIBRARIES': 0}
+		PERM {'PRIVACY': 11, 'NORMAL': 9, 'MONEY': 2, 'INTERNET': 1, 'SMS': 5, 'DANGEROUS': 16, 'SIGNATUREORSYSTEM': 0, 'CALL': 0, 'SIGNATURE': 1, 'GPS': 2}
+	FuzzyRisk
+		VALUE 86.6666666667
+./androguard.sh: line 77: ./androapkinfo.py: Permission denied
+../../scraper/downloads/full/9bb13797-696e-4f1a-b393-227e40679ff1.apk
+	RedFlags
+		DEX {'NATIVE': 1, 'DYNAMIC': 1, 'CRYPTO': 0, 'REFLECTION': 1}
+		APK {'DEX': 0, 'EXECUTABLE': 0, 'ZIP': 0, 'SHELL_SCRIPT': 0, 'APK': 0, 'SHARED LIBRARIES': 0}
+		PERM {'PRIVACY': 11, 'NORMAL': 9, 'MONEY': 2, 'INTERNET': 1, 'SMS': 5, 'DANGEROUS': 16, 'SIGNATUREORSYSTEM': 0, 'CALL': 0, 'SIGNATURE': 1, 'GPS': 2}
+	FuzzyRisk
+		VALUE 86.6666666667
+./androguard.sh: line 77: ./androapkinfo.py: Permission denied

@@ -1,0 +1,416 @@
+.TH TXL 1 "5 July 2012"
+.DA 5 Jul 2012
+.SH NAME
+txl \- 
+TXL Programming Language Compiler/Interpreter (Version 10.6)
+.SH SYNOPSIS
+.na
+.B txl 
+[ 
+.IR options
+]
+[ 
+.IR -o outputfile
+]
+.IR inputfile
+[
+.IR txlfile
+]
+[
+.IR "- useroptions"
+]
+.ad
+.SH DESCRIPTION
+TXL is a programming language specifically designed to support 
+transformational programming.   The basic paradigm of TXL involves 
+transforming input to output using a set of structural transformation
+rules that describe by example how different parts of the input are to be
+changed into output.  Each TXL program defines its own context free grammar
+according to which the input is to be parsed, and rules are
+constrained to preserve grammatical structure in order to guarantee a
+well-formed result.
+.PP
+The TXL intepreter is a general purpose source-to-source
+transformation system, well suited to a wide class of computational problems
+but particularly adept at language processing.
+TXL has been used for rapid prototyping of new language parsers, 
+semantic analyzers, translators, transliterators and interpreters;
+rapid prototyping of new and domain-directed features and dialects 
+in existing languages;  software code analysis and design recovery;
+software restructuring and remodularization;  metaprogramming and 
+retroactive reuse;  source-level optimization and parallelization;
+inter-paradigm program transformation;  logical formula 
+simplification and interpretation;  program analysis, instrumentation 
+and measurement;  program normalization and structural comparison.
+.PP
+The
+.IR `txl'
+command provides a convenient interface for executing TXL programs
+to transform input files.
+The first command argument,
+.IR `inputfile',
+specifies the input file to be transformed by the TXL program,
+and the second argument,
+.IR `txlfile',
+is the TXL program itself.
+The 
+.IR txlfile
+must be named ending in
+.IR `.Txl'
+(e.g., 
+.IR Transform.Txl
+)
+and is normally either in the present working directory,
+the
+.IR Txl
+subdirectory of the present working directory,
+or the TXL system library
+(e.g.,
+.IR /usr/local/lib/txl
+or
+.IR C:/windows/txl
+).
+If the 
+.IR txlfile
+is omitted, then it is inferred from the file name suffix
+of the given
+.IR inputfile.
+For example, if the given input file to be transformed is 
+.IR `myinput.pas'
+then the the TXL program file is inferred to be
+.IR `pas.Txl'.
+.PP
+Unless the
+.IR -c
+option is used, in which case execution is suppressed, the
+.IR txl
+command compiles, loads and executes the the TXL program to transform
+the given input file.
+Transformed output (only) is sent to the standard output stream 
+(
+.IR /dev/stdout
+or
+.IR CONOUT$
+) and 
+may be saved in an output file using either the
+.IR -o
+option of shell redirection
+(e.g.,
+.IR txl inputfile txlfile > outputfile
+).
+TXL messages are sent to the terminal 
+independently via the standard error stream
+(
+.IR /dev/stderr
+or
+.IR CONERR$
+) and can be redirected separately
+(e.g.,
+.IR txl inputfile txlfile > outputfile 2> errorfile
+).
+
+.SH OPTIONS
+The following options are recognized by the
+.IR txl
+command.
+.TP 10
+\fI\-q[uiet]\fR            
+Quiet operation - turn off all information messages.
+TXL normally prints a version identification 
+and short progress messages indicating the stage of processing on the standard
+error stream as it runs.
+The
+.IR -quiet
+option suppresses all such messages, and allows TXL to print error messages only.
+.TP 10
+\fI\-v[erbose]\fR          
+Verbose operation - give greater detail in information messages.
+Causes TXL to print detailed progress messages giving information on space 
+and files used by each stage of processing.
+Also enables a number of common warning messages that are suppressed by
+default.
+.TP 10
+\fI\-c[ompile]\fR          
+Compile TXL program to TXL virtual machine byte code only (do not execute).
+The compiled TXL virtual machine byte code for the TXL program 
+.IR prog.Txl 
+is output to  the file 
+.IR prog.CTxl
+.  
+The TXL byte code file can be loaded and executed directly by subsequent 
+.IR txl
+commands using the 
+.IR -l 
+option, thus avoiding the overhead of recompiling the program on every run.  
+TXL byte code files can be converted to C and compiled to standalone TXL applications by the 
+.IR txlc
+command (see "man txlc").
+.TP 10
+\fI\-l[oad]\fR          
+Load and transform input using a previously compiled TXL program.   
+The compiled TXL virtual machine byte code for the TXL program 
+.IR prog.Txl
+is loaded directly from the file 
+.IR prog.CTxl
+, which must be a TXL byte code file created by a previous 
+.IR txl -c 
+command.  
+The name of the TXL byte code file can either be inferred from the suffix of the first argument file or be explicitly given as the second argument.  In either case the suffix of the TXL program file is ignored and 
+.IR .CTxl 
+is used instead. 
+TXL byte code files can be converted to C and compiled to standalone TXL applications by the 
+.IR txlc
+command (see "man txlc").
+.TP 10
+\fI\-define SYMBOL\fR            
+Define the TXL preprocessor symbol
+.IR SYMBOL .
+Sets the preprocessor symbol 
+.IR SYMBOL 
+to defined, so that
+.IR #ifdef SYMBOL
+preprocessor directives will succeed in the compile of the TXL program.
+.TP 10
+\fI\-comment\fR            
+Treat comments in the input file as input items.
+Normally TXL discards any comments in the input before parsing.
+When this option is used, comments are treated as input items to be parsed like
+any other.  Care must be take to insure that the input language grammar explicitly
+allows comments in all the expected places, otherwise syntax errors will be flagged.
+.TP 10
+\fI\-char\fR              
+Treat all input characters (including newlines and spaces) as significant.
+Normally TXL treats newlines, spaces and tabs ("white space") in input as separators 
+only.   When this option is specified, all characters in the input are treated as significant 
+and categorized as tokens to be parsed according to the grammar.  This option enables 
+the predefined token classes [space] (any sequence of spaces and tabs) and [newline] 
+(a newline character).  The grammar must be crafted to accept newlines and spaces 
+wherever they may occur in the input.  This option automatically suppresses all
+output spacing.
+.TP 10
+\fI\-newline\fR              
+Treat newline characters only (not tabs and spaces) as significant.    
+Normally TXL treats newlines, spaces and tabs ("white space") in input as separators only.   When this option is specified, newline characters (i.e. line boundaries) in the input are treated as significant and categorized as tokens to be parsed according to the  grammar.  This option enables the predefined token class [newline] (a newline character,that is, ASCII LF (Unix/Linux) or CR/LF (Windows) ).  The grammar must be crafted to accept newlines and spaces wherever they may occur in the input. 
+.TP 10
+\fI\-multiline\fR              
+Allow tokens to cross line boundaries (default).
+TXL allows tokens such as [stringlit] and [charlit] to cross line boundaries in order to handle multi-line strings, as for example in C.  Newlines inside a mutli-line token are preserved in the token text.  For some languages and grammars it may be necessary to limit tokens to a single line by disabling this option using -nomultiline as a #pragma in the grammar.
+.TP 10
+\fI\-token\fR              
+Treat newlines and spaces as separators only.   
+Disables character level input, and treats all newlines, spaces and tabs as separators only.
+This is the default input mode.
+.TP 10
+\fI\-txl\fR              
+Treat the input being transformed as TXL source.
+This option makes it possible to transform TXL programs themselves using TXL.  
+Sets the lexical conventions of the input to TXL's own defaults.
+In particular, disables unquoted character literals and enables treatment of 
+single quotes as separate input tokens.
+.TP 10
+\fI\-attr\fR              
+Print attributes in the transformed output.
+Normally attributes (items of type [attr X] for some X)
+are not printed in the output of a TXL program.
+.TP 10
+\fI\-raw\fR              
+Output transformed source in raw (unspaced) format.
+Normally TXL uses a set of built-in spacing rules appropriate to
+most high-level programming languages for formatting output.
+This option turns off all spacing and line wrapping
+in output except where the output would otherwise be ambiguous 
+(e.g. between two adjacent identifiers),
+and as explicitly specified in the grammar using [SP] and [NL]. 
+When used in conjunction with [SP], [NL] and [IN]/[EX],
+this option gives the user complete control over output formatting.
+.TP 10
+\fI\-id[chars] 'CCC'\fR
+Treat the characters 'CCC' as valid identifier characters in [id] tokens.  
+Adds the given characters as valid identifier characters in the 
+[id] predefined token class.  More general control over [id] can be achieved using the
+tokens statement in the TXL program.
+.TP 10
+\fI\-sp[chars] 'CCC'\fR	
+Treat the characters 'CCC' as white space.  
+Adds the given characters to the set of characters treated as equivalent to the space 
+character and treated as separators.  If -char is specified, these characters will be 
+added to those matched by the [space] predefined token class.
+.TP 10
+\fI\-esc[char] 'C'\fR	
+Use 'C' as the escape character in string and character literals.  
+Sets the string and character literal escape character to 'C'.  
+By default the escape character is '\' (e.g., "Here: \" is an embedded quote".   
+If either  "'" or  '"' is specified, then '"' is used for string literals 
+(e.g.,  "Here: "" is an embedded quote") and "'" is used for character literals 
+(e.g., 'Here: '' is an embedded quote'). 
+.TP 10
+\fI\-upper\fR
+Translate all unquoted input to upper case.  
+Translates all input tokens except [stringlit] and [charlit] to upper case on input. 
+.TP 10
+\fI\-lower\fR
+Translate all unquoted input to lower case.  
+Translates all input tokens except [stringlit] and [charlit] to lower case on input. 
+.TP 10
+\fI\-case\fR
+Ignore case in input.  By default TXL is case-sensitive, that is, 
+.IR abc, ABC 
+and
+.IR aBc 
+are all treated as different. This option specifies that the input language is case-insensitive, that is, 
+.IR abc, ABC, aBc 
+and 
+.IR Abc 
+are all to be treated as the same.  Original case of  input tokens is preserved in output unless explicitly changed by the TXL program (for example, using the [toupper]  or [tolower] built-in functions).
+However, within the TXL program all identifiers and keywords will appear to be lower case only, 
+so literal keywords or identifiers in nonterminal definitions, functions and rules should be coded in lower case.
+.TP 10
+\fI\-w[idth] NNN\fR              
+Set the maximum output line width to NNN characters.
+By default TXL formats output in at most 128 characters per line.
+NNN must be a positive integer between 20 and 1024000.
+This option has no effect when -raw is used.
+.TP 10
+\fI\-in[dent] NN\fR
+Set the output indentation increment to NN characters.  
+Sets the number of character positions indented by [IN] and exdented by [EX] directives 
+to NN characters.  The default is 4 characters.
+.TP 10
+\fI\-tabnl\fR
+Output [TAB_NN] directives may force a newline.  
+Allows [TAB_NN] directives to force a new line in the output if necessary to align the 	
+next output token at output column NN.  This is the default.
+.TP 10
+\fI\-xml\fR
+Output as an XML parse tree.  Outputs the result of the transformation as an XML parse tree (only).  Useful in  converting source text to XML syntax trees, and when debugging transformations.
+See also the 
+.IR -Dparse 
+and 
+.IR -Dresult 
+debugging options. 
+.TP 10
+\fI\-i[nclude] DIR\fR	
+Add DIR to the TXL include file search path.  
+Adds DIR to the set of directories searched for TXL include files that are not present in the 
+present working directory or its Txl subdirectory.  The directories are searched in the 
+order that their -I directives are given on the command line.  If an include file is not found 
+in any of these directories, then TXL system library directory (e.g., /usr/local/lib/txl) is 
+searched last.
+.TP 10
+\fI\-s[ize] MM\fR              
+Set the TXL transform size to MM megabytes.
+Sets the virtual memory allocated to TXL interpreter and transformer data 
+structures to the indicated size.  MM must be a positive integer between 2 and 999.
+In order to maximize transform efficiency, TXL liberally exploits the operating 
+system's native virtual memory by artificially pre-allocating a fixed amount of
+static storage rather than attempting to manage storage dynamically.
+This strategy places static limits on the size of the input that can be processed 
+as well as on the complexity and depth of the transformation that can be performed.
+This option explicitly sets the amount of static storage available and thus can be
+used to increase these limits.  This option is normally used only when the system
+default limits have been exceeded.  See also the -usage option.
+.TP 10
+\fI\-u[sage]\fR              
+Report TXL resource usage statistics at the end of the run.
+Prints a table of the static limits on the various TXL internal 
+data structures and the amount of each actually used by the TXL run.
+This option can be used to choose an appropriate transform size
+for typical input data (see the -size option above).
+.TP 10
+\fI\-o FILE\fR
+Write standard output to file FILE.  
+Normally TXL writes the output of the run to the standard output.  This option redirects 
+output to the specified file instead.
+.TP 10
+\fI\-noOPTION\fR
+Turn command line option OPTION off.  
+Explicitly turns off any command line option (e.g., -noraw).
+.TP 10
+\fI\- USERARGS\fR
+Pass remaining command arguments to the TXL program.  
+Passes all following command line arguments to the TXL program in the predefined 
+global variable TXLargs.   For example, the command line :
+.br
+\fItxl eg.in in.Txl -s 100 - -myopt foo -otheropt\fR
+.br
+will initialize TXLargs to the [repeat stringlit] value "-myopt" "foo" "-otheropt".
+.SH "DEBUGGING OPTIONS"
+The following debugging options are recognized by
+.IR txl .
+All output produced by these options is sent to the terminal
+via the standard error stream.
+.TP 10
+\fI\-analyze\fR
+Invoke the TXL grammar and rule set analyzer.  Causes the TXL compiler to perform an additional set of checks on the grammar and  rule set, including a check for ambiguities and potential efficiency issues in the grammar.  This option may significantly slow down the compile. 
+.TP 10
+\fI\-Dscan\fR
+Print the input tokens to the standard error stream in XML format.
+Prints the input tokens recognized by the TXL scanner on the terminal via the standard 
+error stream.  Useful when debugging token definitions and unexpected syntax errors
+in the input.
+.TP 10
+\fI\-Dparse\fR
+Print the input parse tree to the standard error stream in XML format.  
+Print the input parse tree on the terminal via the standard error stream.  Useful when 
+debugging grammars, or in understanding why a pattern has not matched the input.
+.TP 10
+\fI\-Dresult\fR
+Print the output parse tree to the standard error stream in XML format.  
+Print the output parse tree on the terminal via the standard error stream.  Useful when 
+debugging grammars, or in understanding why output is not formatted as expected.
+.TP 10
+\fI\-Dgrammar\fR
+Print the program grammar to the standard error stream as a parse tree schema 
+in XML format.  
+TXL compiles input language grammars to a compact generic tree format used as both a 
+pattern and a generator for parse trees of input.  This option prints the compiled 
+grammar tree for use in debugging subtle problems with a grammar.
+.TP 10
+\fI\-Dpattern\fR
+Print all pattern and replacement parse tree schemas to the standard error stream 
+in XML format.  
+The parse tree of every pattern and replacement in the TXL program's rule set is printed 
+on the terminal via the standard error stream.  This option is useful in debugging 
+patterns of rules that fail to match input as expected.
+.TP 10
+\fI\-Drules\fR
+Print out the names of rules to the standard error stream as they are applied.  
+A convenient trace of the order in which the rules and functions of the TXL program are 
+actually invoked.
+.TP 10
+\fI\-Dapply\fR
+Print out the actual transformations made by rule applications on the terminal as 
+they happen.
+Useful for following the progress of a transformation.  Transformations are output in the 
+form A => B, where A and B are the text output form of the original and result scope of 
+the transforming rule respectively.
+.TP 10
+\fI\-V[ersion]\fR
+Print the version of the TXL compiler/interpreter on the terminal. 	
+Useful for checking the currently installed or accessible version of TXL.
+.SH FILES
+.nf
+inputfile			the input to be transformed
+txlfile				the TXL program to transform it
+./Txl				user TXL program library
+/usr/local/lib/txl		system TXL program library
+.fi
+.SH BUGS
+Bugs should be reported using the support page on the TXL website, http://www.txl.ca .
+.SH "SEE ALSO"
+.IR txldb (1),
+``The TXL Programming Language, version 10.6'',
+``User's Guide to the TXL Compiler/Interpreter, version 10.6''.
+.SH AUTHORS
+Version 10.6 of TXL was designed and implemented by J.R. Cordy
+at Queen's University, Legasys Corp. and TXL Software Research Inc. 
+between 1994 and 2012.
+.PP
+TXL was originally designed by J.R. Cordy and C.D. Halpern-Hamu
+at the University of Toronto in 1985, and was originally implemented by
+J.R. Cordy, E.M. Promislow and I.H. Carmichael at Queen's University 
+between 1986 and 1988.  Version 7 was completely redesigned 
+and implemented by J.R. Cordy and A. Malton at Queen's University in 1992,
+and Version 10 was redesigned from the ground up by J.R. Cordy in 2001.
+.SH COPYRIGHT
+Copyright 2012 Queen's University at Kingston and James R. Cordy.

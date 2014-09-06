@@ -1,0 +1,15 @@
+Traceback (most recent call last):
+  File "./androrisk.py", line 96, in <module>
+    main(options, arguments)
+  File "./androrisk.py", line 58, in main
+    a = apk.APK( options.input )
+  File "/home/darwin/ProjectKrutz/tools/androguard/androguard/core/bytecodes/apk.py", line 183, in __init__
+    self.zip = zipfile.ZipFile(StringIO.StringIO(self.__raw), mode=mode)
+  File "/usr/lib/python2.7/zipfile.py", line 714, in __init__
+    self._GetContents()
+  File "/usr/lib/python2.7/zipfile.py", line 748, in _GetContents
+    self._RealGetContents()
+  File "/usr/lib/python2.7/zipfile.py", line 763, in _RealGetContents
+    raise BadZipfile, "File is not a zip file"
+zipfile.BadZipfile: File is not a zip file
+./androguard.sh: line 77: ./androapkinfo.py: Permission denied

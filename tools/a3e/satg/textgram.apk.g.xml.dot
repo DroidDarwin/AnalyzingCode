@@ -1,0 +1,22 @@
+digraph G {
+com_applovin_sdk_AppLovinBootReceiver -> com_applovin_sdk_AppLovinService [label="Lcom/applovin/sdk/AppLovinBootReceiver;=>onReceive(Landroid/content/Context;Landroid/content/Intent;)V", fontcolor="red"];
+codeadore_textgram_styling_fragments_StylingHiFragment -> codeadore_textgram_CreateTextboxActivity [label="Lcodeadore/textgram/styling_fragments/StylingHiFragment$3;=>onClick(Landroid/view/View;)V", fontcolor="red"];
+codeadore_textgram_styling_fragments_StylingHiFragment -> codeadore_textgram_EditTextActivity [label="Lcodeadore/textgram/styling_fragments/StylingHiFragment$2;=>onClick(Landroid/view/View;)V", fontcolor="red"];
+codeadore_textgram_ResultActivity -> codeadore_textgram_AboutActivity [label="Lcodeadore/textgram/ResultActivity$6;=>onClick(Landroid/view/View;)V", fontcolor="red"];
+codeadore_textgram_StylingActivity -> codeadore_textgram_ResultActivity [label="Lcodeadore/textgram/StylingActivity$7;=>onClick(Landroid/view/View;)V", fontcolor="red"];
+codeadore_textgram_MainActivity -> codeadore_textgram_StoreActivity [label="Lcodeadore/textgram/MainActivity$3;=>onClick(Landroid/view/View;)V", fontcolor="red"];
+codeadore_textgram_MainActivity -> codeadore_textgram_StylingActivity [label="Lcodeadore/textgram/MainActivity;=>goNext()V", fontcolor="red"];
+codeadore_textgram_SuperSurface -> codeadore_textgram_EditTextActivity [label="Lcodeadore/textgram/SuperSurface$1DoubleTapGestureDetector;=>onDoubleTap(Landroid/view/MotionEvent;)Z", fontcolor="red"];
+codeadore_textgram_el7rUtilities -> codeadore_textgram_StoreItemActivity [label="Lcodeadore/textgram/el7rUtilities$3;=>onPageStarted(Landroid/webkit/WebView;Ljava/lang/String;Landroid/graphics/Bitmap;)V", fontcolor="red"];
+codeadore_textgram_styling_fragments_StylingImagesFragment -> codeadore_textgram_StoreActivity [label="Lcodeadore/textgram/styling_fragments/StylingImagesFragment$6$3;=>onClick(Landroid/content/DialogInterface;I)V", fontcolor="red"];
+codeadore_textgram_styling_fragments_StylingImagesFragment -> codeadore_textgram_StoreActivity [label="Lcodeadore/textgram/styling_fragments/StylingImagesFragment;=>gvItemClicked(Ljava/lang/String;Landroid/view/View;I)V", fontcolor="red"];
+codeadore_textgram_StoreActivity -> codeadore_textgram_StoreItemActivity [label="Lcodeadore/textgram/StoreActivity;=>viewItem(Ljava/lang/String;)V", fontcolor="red"];
+codeadore_textgram_Utilities -> codeadore_textgram_ResultActivity [label="Lcodeadore/textgram/Utilities;=>optionsMenuAction(Landroid/view/MenuItem;Landroid/app/Activity;Ljava/lang/String;)V", fontcolor="red"];
+codeadore_textgram_Utilities -> codeadore_textgram_AboutActivity [label="Lcodeadore/textgram/Utilities;=>optionsMenuAction(Landroid/view/MenuItem;Landroid/app/Activity;Ljava/lang/String;)V", fontcolor="red"];
+codeadore_textgram_Utilities -> codeadore_textgram_RAppsActivity [label="Lcodeadore/textgram/Utilities;=>optionsMenuAction(Landroid/view/MenuItem;Landroid/app/Activity;Ljava/lang/String;)V", fontcolor="red"];
+codeadore_textgram_Utilities -> codeadore_textgram_StoreActivity [label="Lcodeadore/textgram/Utilities;=>optionsMenuAction(Landroid/view/MenuItem;Landroid/app/Activity;Ljava/lang/String;)V", fontcolor="red"];
+codeadore_textgram_Utilities -> codeadore_textgram_GoProActivity [label="Lcodeadore/textgram/Utilities;=>optionsMenuAction(Landroid/view/MenuItem;Landroid/app/Activity;Ljava/lang/String;)V", fontcolor="red"];
+codeadore_textgram_Utilities -> codeadore_textgram_SettingsActivity [label="Lcodeadore/textgram/Utilities;=>optionsMenuAction(Landroid/view/MenuItem;Landroid/app/Activity;Ljava/lang/String;)V", fontcolor="red"];
+com_google_ads_util_AdUtil -> com_google_ads_AdActivity [label="Lcom/google/ads/util/AdUtil;=>c(Landroid/content/Context;)Z", fontcolor="red"];
+com_applovin_impl_adview_aj -> com_applovin_adview_AppLovinInterstitialActivity [label="Lcom/applovin/impl/adview/aj;=>i()V", fontcolor="red"];
+}

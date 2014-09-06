@@ -1,0 +1,42 @@
+# -*- makefile -*-
+# Makefile for mkmf.
+# Makefile for Unix and GNU/Linux with gcc/g++ compiler
+
+CC=gcc
+CPP=g++
+
+# if you use egcs-2.90.* version of GCC please add option -fno-exceptions 
+# to reduce code size and increase performance
+
+# Debug version
+#CFLAGS = -c -Wall -O0 -g 
+
+# Optimized version
+CFLAGS = -c -Wall -O2 -g
+
+# Optimized version with switched off asserts
+#CFLAGS = -c -Wall -O2 -g -DNDEBUG
+
+LFLAGS=-g
+
+# Directory to place executables
+INSTALL_DIR=/usr/local/bin
+
+all: antic jlint
+
+antic.o: antic.c
+	$(CC) $(CFLAGS) antic.c
+
+antic: antic.o
+	$(CC) $(LFLAGS) -o antic antic.o
+
+clean: 
+	rm -f  *.o *.exe core *~ *.his *.class jlint antic
+
+targz: clean
+	cd ..; tar cvzf jlint.tar.gz jlint
+
+install:	
+	cp jlint antic $(INSTALL_DIR)
+	chmod 755 $(INSTALL_DIR)/antic
+	chmod 755 $(INSTALL_DIR)/jlint

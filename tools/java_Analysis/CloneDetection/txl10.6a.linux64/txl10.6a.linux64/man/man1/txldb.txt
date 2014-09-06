@@ -1,0 +1,301 @@
+TXLDB(1)                                                              TXLDB(1)
+
+
+
+NAME
+       txldb − TXL Programming Language Debugger (Version 10.6)
+
+SYNOPSIS
+       txldb [ options ] inputfile [ txlfile ] [ ‐ useroptions ]
+
+DESCRIPTION
+       TXL  is  a programming language specifically designed to support trans‐
+       formational programming.   The basic paradigm of  TXL  involves  trans‐
+       forming  input to output using a set of structural transformation rules
+       that describe by example how different parts of the  input  are  to  be
+       changed  into  output.   Each  TXL program defines its own context free
+       grammar according to which the input is to be  parsed,  and  rules  are
+       constrained  to  preserve grammatical structure in order to guarantee a
+       well‐formed result.
+
+       The TXL intepreter is a general purpose source‐to‐source transformation
+       system,  well suited to a wide class of computational problems but par‐
+       ticularly adept at language processing.  TXL has been  used  for  rapid
+       prototyping  of  new language parsers, semantic analyzers, translators,
+       transliterators and interpreters; rapid prototyping of new and  domain‐
+       directed  features  and  dialects in existing languages;  software code
+       analysis and design recovery; software restructuring and  remodulariza‐
+       tion;   metaprogramming  and retroactive reuse;  source‐level optimiza‐
+       tion and parallelization; inter‐paradigm program transformation;  logi‐
+       cal  formula  simplification  and  interpretation;   program  analysis,
+       instrumentation and measurement;  program normalization and  structural
+       comparison.
+
+       The  txldb  command  provides  a convenient interface for executing TXL
+       programs to transform input files using the TXL  debugger.   The  first
+       command  argument,  ‘inputfile’,  specifies the input file to be trans‐
+       formed by the TXL program, and the second argument, ‘txlfile’,  is  the
+       TXL  program itself.  The txlfile must be named ending in ‘.Txl’ (e.g.,
+       Transform.Txl ) and is normally either in the  present  working  direc‐
+       tory, the Txl subdirectory of the present working directory, or the TXL
+       system library (e.g., /usr/local/lib/txl or C:/windows/txl ).   If  the
+       txlfile  is  omitted,  then it is inferred from the file name suffix of
+       the given inputfile.  For example, if the  input  file  is  myinput.pas
+       then the TXL program file is inferred to be pas.Txl.
+
+       txldb  compiles, loads and executes the TXL program under control of an
+       interactive debugging interface to  transform  the  given  input  file.
+       Transformed  output  (only)  is  sent  to  the standard output stream (
+       /dev/stdout or CONOUT$ ) and may be  saved  in  an  output  file  using
+       either  the  ‐o  option  or shell redirection (e.g., txldbinputfiletxl‐
+       file>outputfile ).  Debugger prompts and TXL messages are sent  to  the
+       terminal  independently  via the standard error stream ( /dev/stderr or
+       CONERR$ ) and debugger commands are accepted from the terminal via  the
+       standard input stream ( /dev/stdin or CONIN$ ).
+
+OPTIONS
+       The  following  options  are recognized by the txldb command.  For more
+       detail on TXL options see txl(1).
+
+       −q[uiet]  Quiet operation ‐ turn off all information messages.
+
+       −v[erbose]
+                 Verbose operation ‐ give greater detail in  information  mes‐
+                 sages.
+
+       −define SYMBOL
+                 Define the TXL preprocessor symbol SYMBOL.
+
+       −comment  Treat comments in the input file as input items.
+
+       −char     Treat all input characters (including newlines and spaces) as
+                 significant.
+
+       −newline  Treat newline characters only (not tabs and spaces)  as  sig‐
+                 nificant.   −multiline  Allow tokens to cross line boundaries
+                 (default).
+
+       −token    Treat newlines and spaces as separators only.   This  is  the
+                 default input mode.
+
+       −txl      Treat the input being transformed as TXL source.
+
+       −attr     Print attributes in the transformed output.
+
+       −raw      Output transformed source in raw (unspaced) format.
+
+       −id[chars] ’CCC’
+                 Treat  the  characters ’CCC’ as valid following characters in
+                 [id] tokens.
+
+       −sp[chars] ’CCC’
+                 Treat the characters ’CCC’ as white space.
+
+       −esc[char] ’C’
+                 Use ’C’ as the escape character in string and character  lit‐
+                 erals.
+
+       −upper    Translate all unquoted input to upper case.
+
+       −lower    Translate all unquoted input to lower case.
+
+       −case     Ignore case in input.
+
+       −w[idth] NNN
+                 Set the maximum output line width to NNN characters.
+
+       −in[dent] NN
+                 Set the output indentation increment to NN characters.
+
+       −tabnl    Output  [TAB_NN] directives may force a newline.  This is the
+                 default.
+
+       −xml      Output as an XML parse tree.
+
+       −i[nclude] DIR
+                 Add DIR to the TXL include file search path.
+
+       −s[ize] MM
+                 Set the TXL transform size to MM megabytes.
+
+       −u[sage]  Report TXL resource usage statistics at the end of the run.
+
+       −o FILE
+                 Write standard output to file FILE.
+
+       −noOPTION Turn command line option OPTION off.
+
+       − USERARGS
+                 Pass remaining command arguments to the TXL program.
+
+DEBUGGING OPTIONS
+       The following TXL debugging options are recognized by txldb.  For  more
+       details see txl(1).
+
+       −analyze  Invoke the TXL grammar and rule set analyzer.
+
+       −Dscan    Print  the  input  tokens to the standard error stream in XML
+                 format.
+
+       −Dparse   Print the input parse tree to the standard  error  stream  in
+                 XML format.
+
+       −Dresult  Print  the  output parse tree to the standard error stream in
+                 XML format.
+
+       −Dgrammar Print the program grammar to the standard error stream  as  a
+                 parse tree schema in XML format.
+
+       −Dpattern Print  all  pattern and replacement parse tree schemas to the
+                 standard error stream in XML format.
+
+       −Drules   Print out the names of rules to the standard error stream  as
+                 they  are  applied.   (Redundant in TXLDB ‐ see "TXL DEBUGGER
+                 COMMANDS" below.)
+
+       −Dapply   Print out the actual transformations made  by  rule  applica‐
+                 tions  on the terminal as they happen.  (Redundant in TXLDB ‐
+                 see "TXL DEBUGGER COMMANDS" below.)
+
+       −V[ersion]
+                 Print the version of the TXL compiler/interpreter on the ter‐
+                 minal.
+
+TXL DEBUGGER COMMANDS
+       ‘txldb’ provides an interactive interface for stepping through a trans‐
+       formation on a rule‐by‐rule basis.  Once the TXL program is interpreted
+       and  execution  begins,  the TXL rule debugger is automatically entered
+       and continued execution of the TXL program proceeds under control of  a
+       small set of interactive debugging commands.  The TXL debugger provides
+       the following commands:
+
+       rules     List the names of all of the rules and functions in  the  TXL
+                 program on the terminal.
+
+       rule      Print the name of currently executing rule on the terminal.
+
+       set [RuleName]
+                 Set a breakpoint at rule or function ‘RuleName’ (default cur‐
+                 rent).  TXL will return control to the  debugger  whenever  a
+                 breakpoint is encountered.
+
+       clear [RuleName]
+                 Clear  the breakpoint at rule or function ‘RuleName’ (default
+                 current).
+
+       clr [RuleName]
+                 Same as clear.
+
+       showbps   Print a list of all currently set breakpoints on  the  termi‐
+                 nal.
+
+       scope     Print  the  text  of  the scope of application of the current
+                 rule invocation on the terminal.  Valid only on  entry  to  a
+                 rule, before a pattern match has been found.
+
+       match     Print  the text of the current pattern match on the terminal.
+                 Valid only after pattern match and before  replacement  in  a
+                 rule.
+
+       matchcontext
+                 Print  the  text  of the current pattern match highlighted in
+                 the context of the scope on the terminal.  Valid  only  after
+                 pattern  match and before replacement in a rule.  The pattern
+                 match is bracketed in the scope using the markers "|>>>|" and
+                 "|<<<|".
+
+       result    Print  the  text  of  the result of the current contstruct or
+                 rule replacement.
+
+       vars      Print a list of the names and types of all currently  visible
+                 TXL variables.
+
+       VarName or ’VarName
+                 Print  the  text of the current binding of TXL variable ‘Var‐
+                 Name’ on the terminal.
+
+       tree VarName or tree ’VarName
+                 Print the parse tree of the current binding of  TXL  variable
+                 VarName  on  the  terminal  in XML format.  The variable name
+                 must be quoted only if it is one of scope, match or result.
+
+       tree scope
+                 Print the parse tree of the scope of application of the  cur‐
+                 rent  rule  invocation  on the terminal in XML format.  Valid
+                 only on entry to a rule, before  a  pattern  match  has  been
+                 found.
+
+       tree match
+                 Print the parse tree of the current pattern match on the ter‐
+                 minal in XML format.  Valid only after a  pattern  match  and
+                 before replacement in a rule.
+
+       tree result
+                 Print  the  parse tree of the result of the current construct
+                 or rule replacement on the terminal in XML format.
+
+       where     Print the current rule name and execution state on the termi‐
+                 nal.
+
+       show [RDname]
+                 Print  the  source  code of the rule, function or nonterminal
+                 type definition ‘RDname’ (default current) on the terminal.
+
+       go or run Continue execution until the next breakpoint or end of trans‐
+                 formation.
+
+       next  or  .
+                 Continue  execution  until  the  next  statement  (construct,
+                 deconstruct, import, export, where or by clause) in the  cur‐
+                 rent rule or function.
+
+       /[RuleName]
+                 Continue  execution until the next main pattern match of rule
+                 RuleName or end of transformation.
+
+       /         Continue execution until the next main pattern match  of  the
+                 curren rule or end of transformation.
+
+       //        Continue  execution until next pattern match (of any rule) or
+                 end of transformation.
+
+       step [N]  Step trace execution for N (default 1) steps.
+
+       step or RETURN
+                 Step trace execution for one step.
+
+       help      Print a summary of TXL debugger commands on the terminal.
+
+       quit      Abort the transformation and exit TXL.
+
+FILES
+       inputfile           the input to be transformed
+       txlfile                  the TXL program to transform it
+       /usr/local/lib/txl       system TXL program library
+
+BUGS
+       Bugs should be reported using the support  page  on  the  TXL  website,
+       http://www.txl.ca .
+
+SEE ALSO
+       txl(1),  ‘‘The TXL Programming Language, version 10.6’’, ‘‘User’s Guide
+       to the TXL Compiler/Interpreter, version 10.6’’.
+
+AUTHORS
+       Version 10.6 of TXL was designed  and  implemented  by  J.R.  Cordy  at
+       Queen’s  University,  Legasys  Corp.  and  TXL  Software  Research Inc.
+       between 1994 and 2012.
+
+       TXL was originally designed by J.R. Cordy and C.D. Halpern‐Hamu at  the
+       University  of  Toronto in 1985, and was originally implemented by J.R.
+       Cordy, E.M. Promislow and I.H. Carmichael at Queen’s University between
+       1986  and 1988.  Version 7 was completely redesigned and implemented by
+       J.R. Cordy and A. Malton at Queen’s University in 1992, and Version  10
+       was redesigned from the ground up by J.R. Cordy in 2001.
+
+COPYRIGHT
+       Copyright 2012 Queen’s University at Kingston and James R. Cordy.
+
+
+
+                                  5 July 2012                         TXLDB(1)

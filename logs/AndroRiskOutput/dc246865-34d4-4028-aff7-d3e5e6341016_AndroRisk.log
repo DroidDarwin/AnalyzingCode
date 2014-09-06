@@ -1,0 +1,17 @@
+Traceback (most recent call last):
+  File "./androrisk.py", line 96, in <module>
+    main(options, arguments)
+  File "./androrisk.py", line 58, in main
+    a = apk.APK( options.input )
+  File "/home/darwin/ProjectKrutz/tools/androguard/androguard/core/bytecodes/apk.py", line 183, in __init__
+    self.zip = zipfile.ZipFile(StringIO.StringIO(self.__raw), mode=mode)
+  File "/usr/lib/python2.7/zipfile.py", line 714, in __init__
+    self._GetContents()
+  File "/usr/lib/python2.7/zipfile.py", line 748, in _GetContents
+    self._RealGetContents()
+  File "/usr/lib/python2.7/zipfile.py", line 807, in _RealGetContents
+    x._decodeExtra()
+  File "/usr/lib/python2.7/zipfile.py", line 373, in _decodeExtra
+    tp, ln = unpack('<HH', extra[:4])
+struct.error: unpack requires a string argument of length 4
+./androguard.sh: line 77: ./androapkinfo.py: Permission denied

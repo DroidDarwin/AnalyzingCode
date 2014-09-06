@@ -1,0 +1,16 @@
+m
+melsim
+melsim/elsign
+melsim/elsign/formula
+melsim/elsign/libelsign
+melsim/similarity
+melsim/similarity/libsimilarity
+melsim/similarity/libsimilarity/bz2
+melsim/similarity/libsimilarity/lzma
+melsim/similarity/libsimilarity/smaz
+melsim/similarity/libsimilarity/snappy
+melsim/similarity/libsimilarity/vcblocksort
+melsim/similarity/libsimilarity/xz
+melsim/similarity/libsimilarity/z
+mexamples/text
+mtests

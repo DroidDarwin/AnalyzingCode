@@ -1,0 +1,23 @@
+WARNING: unknown string item @ 54700
+Traceback (most recent call last):
+  File "/home/darwin/ProjectKrutz/tools/androguard/androguard/core/bytecodes/dvm.py", line 6982, in get_raw_string
+    off = self.__manage_item[ "TYPE_STRING_ID_ITEM" ][idx].get_string_data_off()
+IndexError: list index out of range
+WARNING: unknown string item @ 63517
+Traceback (most recent call last):
+  File "/home/darwin/ProjectKrutz/tools/androguard/androguard/core/bytecodes/dvm.py", line 6982, in get_raw_string
+    off = self.__manage_item[ "TYPE_STRING_ID_ITEM" ][idx].get_string_data_off()
+IndexError: list index out of range
+WARNING: unknown string item @ 106051111
+Traceback (most recent call last):
+  File "/home/darwin/ProjectKrutz/tools/androguard/androguard/core/bytecodes/dvm.py", line 6982, in get_raw_string
+    off = self.__manage_item[ "TYPE_STRING_ID_ITEM" ][idx].get_string_data_off()
+IndexError: list index out of range
+../../scraper/downloads/full/0029f04f-d0bc-4d17-985e-a7ad38a6362f.apk
+	RedFlags
+		DEX {'NATIVE': 1, 'DYNAMIC': 1, 'CRYPTO': 1, 'REFLECTION': 1}
+		APK {'DEX': 0, 'EXECUTABLE': 0, 'ZIP': 0, 'SHELL_SCRIPT': 0, 'APK': 0, 'SHARED LIBRARIES': 0}
+		PERM {'PRIVACY': 0, 'NORMAL': 1, 'MONEY': 0, 'INTERNET': 1, 'SMS': 0, 'DANGEROUS': 2, 'SIGNATUREORSYSTEM': 0, 'CALL': 0, 'SIGNATURE': 0, 'GPS': 0}
+	FuzzyRisk
+		VALUE 92.0
+./androguard.sh: line 77: ./androapkinfo.py: Permission denied

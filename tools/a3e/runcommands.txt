@@ -1,0 +1,3 @@
+Dan-macbook:satg dan$ pwd
+/Users/dan/git/Research/AndroidEvolution/ProjectKrutz/tools/a3e/a3e/satg
+Dan-macbook:satg dan$ ./apk2satg.sh ../apks/textgram.apk 

@@ -1,0 +1,46 @@
+./test1/test.java:7: Result of operation & is always 0.
+./test1/test.java:7: Comparison always produces the same result.
+./test1/test.java:9: Comparison always produces the same result.
+./test1/test.java:12: Inequality comparison can be replaced with equality comparison.
+./test1/test.java:7: Local variable 'x' shadows component of class 'base_class'.
+./test1/test.java:23: Value of referenced variable 'dc' may be NULL.
+./test1/test.java:29: Result of operation & is always 0.
+./test1/test.java:29: Comparison always produces the same result.
+./test1/test.java:34: Comparison always produces the same result.
+./test1/test.java:36: Compared expressions can be equal only when both of them are 0.
+./test1/test.java:37: Comparison always produces the same result.
+./test1/test.java:39: Range of expression value has no intersection with short type domain.
+./test1/test.java:44: Data can be lost as a result of truncation to int.
+./test1/test.java:47: Result of operation & is always 0.
+./test1/test.java:47: Comparison always produces the same result.
+./test1/test.java:48: Shift << count range [2,33] is out of domain.
+./test1/test.java:28: Local variable 'x' shadows component of class 'base_class'.
+Verification completed: 17 reported messages.
+./test1/test.java:63: Comparison of short with char.
+./test1/test.java:64: Comparison always produces the same result.
+./test1/test.java:65: Compare strings as object references.
+./test1/test.java:67: Comparison always produces the same result.
+./test1/test.java:68: Shift << count range [1,32] is out of domain.
+./test1/test.java:69: Result of operation >> is always 0.
+./test1/test.java:72: Switch case constant 4 can't be produced by switch expression.
+./test1/test.java:74: Zero operand for * operation.
+./test1/test.java:74: Result of operation * is always 0.
+./test1/test.java:77: Comparison always produces the same result.
+./test1/test.java:82: Comparison always produces the same result.
+./test1/test.java:84: Shift << with count <= than -2.
+./test1/test.java:87: Maybe type cast is not correctly applied.
+./test1/test.java:88: Range of expression value has no intersection with short type domain.
+./test1/test.java:91: Zero operand for * operation.
+./test1/test.java:91: Result of operation * is always 0.
+./test1/test.java:101: Compare strings as object references.
+./test1/test.java:103: Method finalize() doesn't call super.finalize().
+./test1/test.java:108: Method '<this>.notify' is called without synchronizing on '<this>'.
+./test1/test.java:106: Method base_class.refer(derived_class) is not overridden by method with the same name of derived class 'derived_class'.
+./test1/test.java:113: Method derived_class.equal(boolean, boolean) can be called from different threads and is not synchronized.
+./test1/test.java:112: Loop 1: invocation of synchronized method derived_class.monitor(derived_class) can cause deadlock.
+Verification completed: 22 reported messages.
+Verification completed: 0 reported messages.
+Verification completed: 0 reported messages.
+Verification completed: 0 reported messages.
+./test1/test.java:176: Local variable 't' shadows component of class 'Thread2'.
+Verification completed: 1 reported messages.

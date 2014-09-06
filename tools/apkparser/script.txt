@@ -1,0 +1,3 @@
+SELECT rowID, Name,OperatingSystems, DatePublished, FileSize, GeneratedFileSize,  ModifiedDatePublished, ModifiedOS, GeneratedVersion FROM apkinformation
+
+update apkinformation set GeneratedVersion  where rowid=1

@@ -1,0 +1,372 @@
+.TH TXLDB 1 "5 July 2012"
+.DA 5 Jul 2012
+.SH NAME
+txldb \- 
+TXL Programming Language Debugger (Version 10.6)
+.SH SYNOPSIS
+.na
+.B txldb 
+[ 
+.B options
+]
+.IR inputfile
+[
+.IR txlfile
+]
+[
+.IR "- useroptions"
+]
+.ad
+.SH DESCRIPTION
+TXL is a programming language specifically designed to support 
+transformational programming.   The basic paradigm of TXL involves 
+transforming input to output using a set of structural transformation
+rules that describe by example how different parts of the input are to be
+changed into output.  Each TXL program defines its own context free grammar
+according to which the input is to be parsed, and rules are
+constrained to preserve grammatical structure in order to guarantee a
+well-formed result.
+.PP
+The TXL intepreter is a general purpose source-to-source
+transformation system, well suited to a wide class of computational problems
+but particularly adept at language processing.
+TXL has been used for rapid prototyping of new language parsers, 
+semantic analyzers, translators, transliterators and interpreters;
+rapid prototyping of new and domain-directed features and dialects 
+in existing languages;  software code analysis and design recovery;
+software restructuring and remodularization;  metaprogramming and 
+retroactive reuse;  source-level optimization and parallelization;
+inter-paradigm program transformation;  logical formula 
+simplification and interpretation;  program analysis, instrumentation 
+and measurement;  program normalization and structural comparison.
+.PP
+The 
+.IR txldb 
+command provides a convenient interface for executing TXL programs to 
+transform input files using the TXL debugger.  The first command argument, 
+.IR `inputfile' ,
+specifies the input file to be transformed by the TXL program, and
+the second argument, 
+.IR `txlfile' , 
+is the TXL program itself.  The txlfile must be named ending in 
+.IR `.Txl' 
+(e.g.,
+.IR Transform.Txl
+) and is normally either in the present working directory, 
+the Txl subdirectory of the present working directory, 
+or the TXL system library (e.g.,  
+.IR /usr/local/lib/txl
+or
+.IR C:/windows/txl
+).  If the 
+.IR txlfile 
+is omitted, then it is inferred from
+the file name suffix of the given 
+.IR inputfile .  
+For example, if the input file is 
+.IR myinput.pas 
+then the TXL program file
+is inferred to be 
+.IR pas.Txl . 
+
+.IR txldb 
+compiles, loads and executes the TXL program under control of 
+an interactive debugging interface to transform the
+given input file.  Transformed output (only) is sent to the 
+standard output stream 
+(
+.IR /dev/stdout
+or
+.IR CONOUT$
+) and
+may be saved in an output file
+using either the 
+.IR -o 
+option or shell redirection (e.g., 
+.IR txldb inputfile txlfile > outputfile
+).  
+Debugger prompts and TXL messages are sent to the terminal 
+independently via the standard error stream
+(
+.IR /dev/stderr
+or
+.IR CONERR$
+) and debugger commands are accepted from
+the terminal via the standard input stream
+(
+.IR /dev/stdin
+or
+.IR CONIN$
+).
+.SH OPTIONS
+The following options are recognized by the
+.IR txldb
+command.
+For more detail on TXL options see
+.IR txl (1).
+.TP 10
+\fI\-q[uiet]\fR            
+Quiet operation - turn off all information messages.
+.TP 10
+\fI\-v[erbose]\fR          
+Verbose operation - give greater detail in information messages.
+.TP 10
+\fI\-define SYMBOL\fR            
+Define the TXL preprocessor symbol
+.IR SYMBOL .
+.TP 10
+\fI\-comment\fR            
+Treat comments in the input file as input items.
+.TP 10
+\fI\-char\fR              
+Treat all input characters (including newlines and spaces) as significant.
+.TP 10
+\fI\-newline\fR              
+Treat newline characters only (not tabs and spaces) as significant.    
+\fI\-multiline\fR              
+Allow tokens to cross line boundaries (default).
+.TP 10
+\fI\-token\fR              
+Treat newlines and spaces as separators only.   
+This is the default input mode.
+.TP 10
+\fI\-txl\fR              
+Treat the input being transformed as TXL source.
+.TP 10
+\fI\-attr\fR              
+Print attributes in the transformed output.
+.TP 10
+\fI\-raw\fR              
+Output transformed source in raw (unspaced) format.
+.TP 10
+\fI\-id[chars] 'CCC'\fR	
+Treat the characters 'CCC' as valid following characters in [id] tokens.  
+.TP 10
+\fI\-sp[chars] 'CCC'\fR	
+Treat the characters 'CCC' as white space.  
+.TP 10
+\fI\-esc[char] 'C'\fR	
+Use 'C' as the escape character in string and character literals.  
+.TP 10
+\fI\-upper\fR
+Translate all unquoted input to upper case.  
+.TP 10
+\fI\-lower\fR
+Translate all unquoted input to lower case.  
+.TP 10
+\fI\-case\fR
+Ignore case in input.
+.TP 10
+\fI\-w[idth] NNN\fR              
+Set the maximum output line width to NNN characters.
+.TP 10
+\fI\-in[dent] NN\fR
+Set the output indentation increment to NN characters.  
+.TP 10
+\fI\-tabnl\fR
+Output [TAB_NN] directives may force a newline.  
+This is the default.
+.TP 10
+\fI\-xml\fR
+Output as an XML parse tree.
+.TP 10
+\fI\-i[nclude] DIR\fR	
+Add DIR to the TXL include file search path.  
+.TP 10
+\fI\-s[ize] MM\fR              
+Set the TXL transform size to MM megabytes.
+.TP 10
+\fI\-u[sage]\fR              
+Report TXL resource usage statistics at the end of the run.
+.TP 10
+\fI\-o FILE\fR	
+Write standard output to file FILE.  
+.TP 10
+\fI\-noOPTION\fR
+Turn command line option OPTION off.  
+.TP 10
+\fI\- USERARGS\fR
+Pass remaining command arguments to the TXL program.  
+.SH "DEBUGGING OPTIONS"
+The following TXL debugging options are recognized by
+.IR txldb .
+For more details see
+.IR txl (1).
+.TP 10
+\fI\-analyze\fR
+Invoke the TXL grammar and rule set analyzer.
+.TP 10
+\fI\-Dscan\fR
+Print the input tokens to the standard error stream in XML format.
+.TP 10
+\fI\-Dparse\fR
+Print the input parse tree to the standard error stream in XML format.  
+.TP 10
+\fI\-Dresult\fR
+Print the output parse tree to the standard error stream in XML format.  
+.TP 10
+\fI\-Dgrammar\fR
+Print the program grammar to the standard error stream as a parse tree schema 
+in XML format.  
+.TP 10
+\fI\-Dpattern\fR
+Print all pattern and replacement parse tree schemas to the standard error stream 
+in XML format.  
+.TP 10
+\fI\-Drules\fR
+Print out the names of rules to the standard error stream as they are applied.  
+(Redundant in TXLDB - see "TXL DEBUGGER COMMANDS" below.)
+.TP 10
+\fI\-Dapply\fR
+Print out the actual transformations made by rule applications on the terminal as 
+they happen.
+(Redundant in TXLDB - see "TXL DEBUGGER COMMANDS" below.)
+.TP 10
+\fI\-V[ersion]\fR
+Print the version of the TXL compiler/interpreter on the terminal.
+.SH "TXL DEBUGGER COMMANDS"
+.IR `txldb'
+provides an interactive interface for stepping through a transformation on a rule-by-rule basis.
+Once the TXL program is interpreted and execution begins, the TXL rule debugger
+is automatically entered and continued execution of the TXL program proceeds under
+control of a small set of interactive debugging commands.
+The TXL debugger provides the following commands:
+.TP 10
+.IR rules                 
+List the names of all of the rules and functions in the TXL program 
+on the terminal.
+.TP 10
+.IR rule                  
+Print the name of currently executing rule on the terminal.
+.TP 10
+.IR "set [RuleName]"  
+Set a breakpoint at rule or function 
+.IR `RuleName' 
+(default current).
+TXL will return control to the debugger whenever a breakpoint
+is encountered.
+.TP 10
+.IR "clear [RuleName]"  
+Clear the breakpoint at rule or function 
+.IR `RuleName' 
+(default current).
+.TP 10
+.IR "clr [RuleName]"  
+Same as 
+.IR clear .
+.TP 10
+.IR showbps               
+Print a list of all currently set breakpoints on the terminal.
+.TP 10
+.IR scope                 
+Print the text of the scope of application of the current rule invocation
+on the terminal.
+Valid only on entry to a rule, before a pattern match has been found.
+.TP 10
+.IR match                 
+Print the text of the current pattern match on the terminal.
+Valid only after pattern match and before replacement in a rule.
+.TP 10
+.IR matchcontext                 
+Print the text of the current pattern match highlighted in the context 
+of the scope on the terminal.  
+Valid only after pattern match and before replacement in a rule.  
+The pattern match is bracketed in the scope using the markers "|>>>|" and "|<<<|".
+.TP 10
+.IR result                
+Print the text of the result of the current contstruct or rule replacement.
+.TP 10
+.IR vars                  
+Print a list of the names and types of all currently visible 
+TXL variables.
+.TP 10
+.IR "VarName or 'VarName"   
+Print the text of the current binding of TXL variable 
+.IR `VarName'
+on the terminal.
+.TP 10
+.IR "tree VarName or tree 'VarName"          
+Print the parse tree of the current binding of TXL variable 
+.IR VarName 
+on the terminal in XML format.  
+The variable name must be quoted only if it is one of 
+.IR "scope, match or result" .  
+.TP 10
+.IR "tree scope"
+Print the parse tree of the scope of application of the current 
+rule invocation on the terminal in XML format.  
+Valid only on entry to a rule, before a pattern match has been found.
+.TP 10
+.IR "tree match"	
+Print the parse tree of the current pattern match on the terminal 
+in XML format.  Valid only after a pattern match and before replacement in a rule.
+.TP 10
+.IR "tree result"
+Print the parse tree of the result of the current construct or rule replacement
+on the terminal in XML format.
+.TP 10
+.IR where                 
+Print the current rule name and execution state on the terminal.
+.TP 10
+.IR "show [RDname]"         
+Print the source code of the rule, function or nonterminal type
+definition 
+.IR `RDname' 
+(default current) on the terminal.
+.TP 10
+.IR "go or run"                    
+Continue execution until the next breakpoint or end of transformation.
+.TP 10
+.IR "next  or  ."	
+Continue execution until the next statement (construct, deconstruct, 
+import, export, where or by clause) in the current rule or function.
+.TP 10
+.IR "/[RuleName]"           
+Continue execution until the next main pattern match of rule 
+.IR RuleName 
+or end of transformation.
+.TP 10
+.IR "/"           
+Continue execution until the next main pattern match of the curren rule 
+or end of transformation.
+.TP 10
+.IR "//"                    
+Continue execution until next pattern match (of any rule) or end of transformation.
+.TP 10
+.IR "step [N]" 
+Step trace execution for N (default 1) steps.
+.TP 10
+.IR "step or RETURN"
+Step trace execution for one step.
+.TP 10
+.IR help                  
+Print a summary of TXL debugger commands on the terminal.
+.TP 10
+.IR quit                  
+Abort the transformation and exit TXL.
+.SH FILES
+.nf
+inputfile			the input to be transformed
+txlfile				the TXL program to transform it
+./Txl				user TXL program library
+/usr/local/lib/txl		system TXL program library
+.fi
+.SH BUGS
+Bugs should be reported using the support page on the TXL website, http://www.txl.ca .
+.SH "SEE ALSO"
+.IR txl (1),
+``The TXL Programming Language, version 10.6'',
+``User's Guide to the TXL Compiler/Interpreter, version 10.6''.
+.SH AUTHORS
+Version 10.6 of TXL was designed and implemented by J.R. Cordy
+at Queen's University, Legasys Corp. and TXL Software Research Inc. 
+between 1994 and 2012.
+.PP
+TXL was originally designed by J.R. Cordy and C.D. Halpern-Hamu
+at the University of Toronto in 1985, and was originally implemented by
+J.R. Cordy, E.M. Promislow and I.H. Carmichael at Queen's University 
+between 1986 and 1988.  Version 7 was completely redesigned 
+and implemented by J.R. Cordy and A. Malton at Queen's University in 1992,
+and Version 10 was redesigned from the ground up by J.R. Cordy in 2001.
+.SH COPYRIGHT
+Copyright 2012 Queen's University at Kingston and James R. Cordy.

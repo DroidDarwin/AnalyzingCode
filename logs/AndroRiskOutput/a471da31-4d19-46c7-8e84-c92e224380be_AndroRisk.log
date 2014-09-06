@@ -1,0 +1,8 @@
+../../scraper/downloads/full/a471da31-4d19-46c7-8e84-c92e224380be.apk
+	RedFlags
+		DEX {'NATIVE': 0, 'DYNAMIC': 0, 'CRYPTO': 1, 'REFLECTION': 1}
+		APK {'DEX': 0, 'EXECUTABLE': 0, 'ZIP': 0, 'SHELL_SCRIPT': 0, 'APK': 0, 'SHARED LIBRARIES': 0}
+		PERM {'PRIVACY': 12, 'NORMAL': 13, 'MONEY': 3, 'INTERNET': 1, 'SMS': 4, 'DANGEROUS': 20, 'SIGNATUREORSYSTEM': 2, 'CALL': 1, 'SIGNATURE': 1, 'GPS': 2}
+	FuzzyRisk
+		VALUE 50.0
+./androguard.sh: line 77: ./androapkinfo.py: Permission denied

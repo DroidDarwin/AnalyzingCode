@@ -1,0 +1,100 @@
+NiCad-3.5/CHANGES-3.0.txt:- Results are now reported as clone pairs rather than
+NiCad-3.5/CHANGES-3.0.txt:- Clone pairs entirely embedded in larger clone pairs
+NiCad-3.5/CHANGES-3.0.txt:  now reported as the largest set of clone pairs for
+NiCad-3.5/CHANGES-3.1.txt:   of clone pairs for which every source fragment is within 
+NiCad-3.5/config/abstractconditions.cfg:# Cluster clone pairs into classes
+NiCad-3.5/config/abstractconditionsreport.cfg:# Cluster clone pairs into classes
+NiCad-3.5/config/abstractexpressions.cfg:# Cluster clone pairs into classes
+NiCad-3.5/config/abstractexpressionsreport.cfg:# Cluster clone pairs into classes
+NiCad-3.5/config/blindrename.cfg:# NiCad3 configuration to find type 3-2 (near-miss blind renamed) clone pairs only
+NiCad-3.5/config/blindrename.cfg:# Cluster clone pairs into classes
+NiCad-3.5/config/blindrenamereport.cfg:# NiCad3 configuration to find type 3-2 (near-miss blind renamed) clone pairs only
+NiCad-3.5/config/blindrenamereport.cfg:# Cluster clone pairs into classes
+NiCad-3.5/config/cloneclusters.cfg:# Cluster clone pairs into classes
+NiCad-3.5/config/cloneclustersreport.cfg:# Cluster clone pairs into classes
+NiCad-3.5/config/consistentrename.cfg:# NiCad3 configuration to find type 3-2c (near-miss consistently renamed) clone pairs only
+NiCad-3.5/config/consistentrename.cfg:# Cluster clone pairs into classes
+NiCad-3.5/config/consistentrenamereport.cfg:# NiCad3 configuration to find type 3-2c (near-miss consistently renamed) clone pairs only
+NiCad-3.5/config/consistentrenamereport.cfg:# Cluster clone pairs into classes
+NiCad-3.5/config/default.cfg:# Cluster clone pairs into classes
+NiCad-3.5/config/defaultreport.cfg:# Cluster clone pairs into classes
+NiCad-3.5/config/filterdeclarations.cfg:# Cluster clone pairs into classes
+NiCad-3.5/config/filterdeclarationsreport.cfg:# Cluster clone pairs into classes
+NiCad-3.5/config/javanormalizeifconditions.cfg:# Cluster clone pairs into classes
+NiCad-3.5/config/javanormalizeifconditionsreport.cfg:# Cluster clone pairs into classes
+NiCad-3.5/config/type1.cfg:# NiCad3 configuration to find type 1 (exact) clone pairs only
+NiCad-3.5/config/type1.cfg:# Cluster clone pairs into classes
+NiCad-3.5/config/type1report.cfg:# NiCad3 configuration to find type 1 (exact) clone pairs only
+NiCad-3.5/config/type1report.cfg:# Cluster clone pairs into classes
+NiCad-3.5/config/type2.cfg:# NiCad3 configuration to find type 2 (blind renamed) clone pairs only
+NiCad-3.5/config/type2.cfg:# Cluster clone pairs into classes
+NiCad-3.5/config/type2c.cfg:# NiCad3 configuration to find type 2c (consistently renamed) clone pairs only
+NiCad-3.5/config/type2c.cfg:# Cluster clone pairs into classes
+NiCad-3.5/config/type2creport.cfg:# NiCad3 configuration to find type 2c (consistently renamed) clone pairs only
+NiCad-3.5/config/type2creport.cfg:# Cluster clone pairs into classes
+NiCad-3.5/config/type2report.cfg:# NiCad3 configuration to find type 2 (blind renamed) clone pairs only
+NiCad-3.5/config/type2report.cfg:# Cluster clone pairs into classes
+NiCad-3.5/config/type3-1.cfg:# NiCad3 configuration to find type 3-1 (near-miss exact) clone pairs only
+NiCad-3.5/config/type3-1.cfg:# Cluster clone pairs into classes
+NiCad-3.5/config/type3-1report.cfg:# NiCad3 configuration to find type 3-1 (near-miss exact) clone pairs only
+NiCad-3.5/config/type3-1report.cfg:# Cluster clone pairs into classes
+NiCad-3.5/config/type3-2.cfg:# NiCad3 configuration to find type 3-2 (near-miss blind renamed) clone pairs only
+NiCad-3.5/config/type3-2.cfg:# Cluster clone pairs into classes
+NiCad-3.5/config/type3-2c.cfg:# NiCad3 configuration to find type 3-2c (near-miss consistently renamed) clone pairs only
+NiCad-3.5/config/type3-2c.cfg:# Cluster clone pairs into classes
+NiCad-3.5/config/type3-2creport.cfg:# NiCad3 configuration to find type 3-2c (near-miss consistently renamed) clone pairs only
+NiCad-3.5/config/type3-2creport.cfg:# Cluster clone pairs into classes
+NiCad-3.5/config/type3-2report.cfg:# NiCad3 configuration to find type 3-2 (near-miss blind renamed) clone pairs only
+NiCad-3.5/config/type3-2report.cfg:# Cluster clone pairs into classes
+NiCad-3.5/QUESTIONS.txt:    NiCad3 produces clone pairs in XML-like format specifying the
+NiCad-3.5/QUESTIONS.txt:5. Can NiCad3 cluster clone pairs into clone classes?
+NiCad-3.5/QUESTIONS.txt:    NiCad3 can optionally cluster clone pairs into clone classes by
+NiCad-3.5/scripts/ClusterPairs:# Cluster clone pairs into classes
+NiCad-3.5/scripts/NiCadCross-MacOSX:    echo "Clustering clone pairs into classes"
+NiCad-3.5/scripts/NiCadCross-Mandriva:    echo "Clustering clone pairs into classes"
+NiCad-3.5/scripts/NiCadCross-Ubuntu:    echo "Clustering clone pairs into classes"
+NiCad-3.5/scripts/NiCadPair-MacOSX:    echo "Clustering clone pairs into classes"
+NiCad-3.5/scripts/NiCadPair-Mandriva:    echo "Clustering clone pairs into classes"
+NiCad-3.5/scripts/NiCadPair-Ubuntu:    echo "Clustering clone pairs into classes"
+NiCad-3.5/scripts/NiCadPair-Ubuntu:    echo "Clustering clone pairs into classes"
+NiCad-3.5/tools/cloneclasses.c:	TL_TLI_TLIPS ((TLint4) 0, "*** Error: too many clone pairs ( > ", (TLint2) 0);
+NiCad-3.5/tools/cloneclasses.c:    TL_TLI_TLIPS ((TLint4) 0, "Reading clone pairs ", (TLint2) 0);
+NiCad-3.5/tools/cloneclasses.c:    TL_TLI_TLIPS ((TLint4) 0, "Clustered clone pairs into ", (TLint2) 0);
+NiCad-3.5/tools/cloneclasses.t:% System information - we read this from the clone pairs file
+NiCad-3.5/tools/cloneclasses.t:% Cloned pairs - we read all clone pairs into this array
+NiCad-3.5/tools/cloneclasses.t:% Read the clone pairs from the system_functions-clonepairs.xml file
+NiCad-3.5/tools/cloneclasses.t:    % Read the clone pairs from it
+NiCad-3.5/tools/cloneclasses.t:	put : 0, "*** Error: too many clone pairs ( > ", maxclones, ")"
+NiCad-3.5/tools/cloneclasses.t:put : 0, "Reading clone pairs " ..
+NiCad-3.5/tools/cloneclasses.t:put : 0, "Clustered clone pairs into ", nclusters, " classes"
+Binary file NiCad-3.5/tools/cloneclasses.x matches
+NiCad-3.5/tools/clonepairs.c:					    TL_TLI_TLIPS ((TLint4) 0, "*** Error: too many clone pairs", (TLint2) 0);
+NiCad-3.5/tools/clonepairs.c:    TL_TLI_TLIPS ((TLint4) 0, "Pruning embedded clone pairs ", (TLint2) 0);
+NiCad-3.5/tools/clonepairs.c:    TL_TLI_TLIPS ((TLint4) 0, " embedded clone pairs", (TLint2) 0);
+NiCad-3.5/tools/clonepairs.c:    TL_TLI_TLIPS ((TLint4) 0, " clone pairs", (TLint2) 0);
+NiCad-3.5/tools/clonepairs.t:			    put : 0, "*** Error: too many clone pairs"
+NiCad-3.5/tools/clonepairs.t:% Prune embedded clone pairs 
+NiCad-3.5/tools/clonepairs.t:    % Remove any embedded smaller clone pairs 
+NiCad-3.5/tools/clonepairs.t:put : 0, "Pruning embedded clone pairs " ..
+NiCad-3.5/tools/clonepairs.t:put : 0, "Pruned ", oldnpairs - npairs, " embedded clone pairs"
+NiCad-3.5/tools/clonepairs.t:put : 0, "Found ", npairs, " clone pairs"
+Binary file NiCad-3.5/tools/clonepairs.x matches
+NiCad-3.5/tools/crossclones.c:					    TL_TLI_TLIPS ((TLint4) 0, "*** Error: too many clone pairs", (TLint2) 0);
+NiCad-3.5/tools/crossclones.c:    TL_TLI_TLIPS ((TLint4) 0, "Pruning embedded clone pairs ", (TLint2) 0);
+NiCad-3.5/tools/crossclones.c:    TL_TLI_TLIPS ((TLint4) 0, " embedded clone pairs", (TLint2) 0);
+NiCad-3.5/tools/crossclones.c:    TL_TLI_TLIPS ((TLint4) 0, " clone pairs", (TLint2) 0);
+NiCad-3.5/tools/crossclones.t:			    put : 0, "*** Error: too many clone pairs"
+NiCad-3.5/tools/crossclones.t:% Prune embedded clone pairs 
+NiCad-3.5/tools/crossclones.t:    % Remove any embedded smaller clone pairs 
+NiCad-3.5/tools/crossclones.t:put : 0, "Pruning embedded clone pairs " ..
+NiCad-3.5/tools/crossclones.t:put : 0, "Pruned ", oldnpairs - npairs, " embedded clone pairs"
+NiCad-3.5/tools/crossclones.t:put : 0, "Found ", npairs, " clone pairs"
+Binary file NiCad-3.5/tools/crossclones.x matches
+NiCad-3.5/tools/PREVcloneclasses.t:% System information - we read this from the clone pairs file
+NiCad-3.5/tools/PREVcloneclasses.t:% Cloned pairs - we read all clone pairs into this array
+NiCad-3.5/tools/PREVcloneclasses.t:% Read the clone pairs from the system_functions-clonepairs.xml file
+NiCad-3.5/tools/PREVcloneclasses.t:    % Read the clone pairs from it
+NiCad-3.5/tools/PREVcloneclasses.t:	put : 0, "*** Error: too many clone pairs ( > ", maxclones, ")"
+NiCad-3.5/tools/PREVcloneclasses.t:put : 0, "Reading clone pairs " ..
+NiCad-3.5/tools/PREVcloneclasses.t:put : 0, "Clustered clone pairs into ", nclusters, " classes"
+NiCad-3.5/tools/tohtmlpairs.t:% Read the clone pairs from it

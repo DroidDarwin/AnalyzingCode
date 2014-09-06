@@ -1,0 +1,45 @@
+====================================
+ Files in the TXL 10.6 Distribution
+====================================
+
+TXL distribution
+
+    00README.txt      - TXL installation and get-started information
+    COPYRIGHT.txt     - TXL copyright, distribution and legal information
+    FILES.txt         - this list of distribution files
+    InstallTxl        - the TXL installer script
+
+TXL commands (copied to the TXL command directory):
+
+    bin/txl           -  the TXL interpreter
+    bin/txlc          -  the TXL compiler
+    bin/txldb         -  the TXL debugger 
+    bin/txlp          -  the TXL profiler 
+
+TXL libraries (copied to the TXL library directory):
+
+    lib/txlcvt.x      -  the TXL byte code converter (used by txlc)
+    lib/txlmain.o     -  the TXL byte code loader (used by txlc)
+    lib/txlvm.o       -  the TXL virtual machine (used by txlc)
+    lib/txlpf.x       -  the TXL profile generator (used by txlp)
+    lib/txlapr.x      -  the TXL profile analyzer (used by txlp)
+
+TXL manual entries (in Unix 'man' format):
+
+    man/man1/txl.1    -  man entry for the TXL interpreter
+    man/man1/txlc.1   -  man entry for the TXL compiler
+    man/man1/txldb.1  -  man entry for the TXL debugger
+    man/man1/txlp.1   -  man entry for the TXL profiler
+
+Where are the TXL manuals and examples?
+
+    TXL manuals, examples and learning materials are available
+    online on the TXL web site, http://www.txl.ca
+
+    Documents.html    - web link to the TXL documentation page
+    Learning.html     - web link to the TXL learning page
+    Examples.html     - web link to the TXL examples page
+    Support.html      - web link to the TXL support page
+
+---
+Rev 6.7.12

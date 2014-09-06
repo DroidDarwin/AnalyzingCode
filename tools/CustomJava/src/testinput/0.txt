@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest  xmlns:android="http://schemas.android.com/apk/res/android"
+ android:versionCode="100" android:versionName="1.0" android:installLocation="0" package="com.sashamortimer.selfemploymenttaxestimator">
+	<supports-screens android:anyDensity="true" android:smallScreens="true" android:normalScreens="true" android:largeScreens="true" android:xlargeScreens="true">
+	</supports-screens>
+	<application android:label="@7F040000" android:icon="@7F020000" android:hardwareAccelerated="true">
+		<meta-data android:name="fullscreen" android:value="1">
+		</meta-data>
+		<meta-data android:name="wakelock" android:value="0">
+		</meta-data>
+		<activity android:label="@7F040001" android:name="org.renpy.android.PythonActivity" android:process=":python" android:launchMode="2" android:screenOrientation="4" android:configChanges="0x400007FF" android:windowSoftInputMode="0x00000003">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN">
+				</action>
+				<category android:name="android.intent.category.LAUNCHER">
+				</category>
+				
+			</intent-filter>
+		</activity>
+	</application>
+	<uses-sdk android:minSdkVersion="8" android:targetSdkVersion="8">
+	</uses-sdk>
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+	</uses-permission>
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE2">
+	</uses-permission>
+	<uses-feature android:glEsVersion="0x00020000">
+	</uses-feature>
+</manifest>

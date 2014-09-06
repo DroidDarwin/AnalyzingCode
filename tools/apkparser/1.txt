@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest  xmlns:android="http://schemas.android.com/apk/res/android"
+ android:versionCode="401" android:versionName="1.401" android:installLocation="0" package="com.app_securities.layout">
+	<application android:label="@7F08001A" android:icon="@7F020090">
+		<uses-library android:name="com.google.android.maps">
+		</uses-library>
+		<activity android:name="com.biznessapps.layout.MainController" android:screenOrientation="1">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN">
+				</action>
+				<category android:name="android.intent.category.LAUNCHER">
+				</category>
+			</intent-filter>
+		</activity>
+		<activity android:name="com.biznessapps.activities.HomeScreenActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+		</activity>
+		<activity android:name="com.google.ads.AdActivity" android:configChanges="0x00000FB0">
+		</activity>
+		<activity android:name="com.biznessapps.activities.HomeClassicScreenActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+		</activity>
+		<activity android:theme="@7F090004" android:name="com.biznessapps.activities.TwitterLoginActivity" android:screenOrientation="1" android:configChanges="0x00000080">
+		</activity>
+		<activity android:name="com.biznessapps.activities.GalleryActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+		</activity>
+		<activity android:name="com.biznessapps.activities.GalleryPreviewActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+		</activity>
+		<activity android:name="com.biznessapps.activities.SingleFragmentActivity" android:screenOrientation="1" android:configChanges="0x00000080" android:windowSoftInputMode="0x00000020">
+		</activity>
+		<activity android:name="com.biznessapps.activities.WebSingleFragmentActivity" android:screenOrientation="1" android:configChanges="0x00000080" android:windowSoftInputMode="0x00000010" android:hardwareAccelerated="true">
+		</activity>
+		<activity android:name="com.biznessapps.activities.NewFanWallActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+		</activity>
+		<activity android:name="com.biznessapps.activities.ContactsMapActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+		</activity>
+		<activity android:name="com.biznessapps.activities.AroundUsActivity" android:screenOrientation="1" android:configChanges="0x00000080">
+		</activity>
+		<activity android:theme="@android:01030007" android:name="com.biznessapps.layout.views.scanning.CaptureActivity" android:screenOrientation="0" android:configChanges="0x000000A0" android:windowSoftInputMode="0x00000003">
+		</activity>
+		<activity android:name="com.biznessapps.layout.views.map.LocationView" android:screenOrientation="1" android:configChanges="0x00000080">
+		</activity>
+		<activity android:theme="@android:01030010" android:name="com.paypal.android.MEP.PayPalActivity" android:screenOrientation="1" android:configChanges="0x00000080">
+		</activity>
+		<activity android:name="com.biznessapps.layout.views.loyalty.LoyaltyCardListView" android:screenOrientation="1" android:configChanges="0x00000080" android:windowSoftInputMode="0x00000020">
+		</activity>
+		<activity android:name="com.biznessapps.activities.CarFinderActivity" android:screenOrientation="1" android:configChanges="0x00000080">
+		</activity>
+		<activity android:name="com.biznessapps.activities.ChooseTimerActivity" android:screenOrientation="1" android:configChanges="0x00000080">
+		</activity>
+		<activity android:name="com.biznessapps.fragments.reservation.PaymentIntegrateFragment" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+		</activity>
+		<activity android:name="net.authorize.android.security.MobileMerchantAuthActivity" android:configChanges="0x000000A0">
+		</activity>
+		<activity android:name="net.authorize.android.security.LoginBaseActivity" android:configChanges="0x000000A0">
+		</activity>
+		<activity android:name="net.authorize.android.aim.AuthCaptureActivity" android:configChanges="0x000000A0">
+		</activity>
+		<activity android:theme="@android:01030010" android:label="@7F08001A" android:name="com.facebook.LoginActivity">
+		</activity>
+		<service android:name="com.biznessapps.player.PlayerService">
+		</service>
+		<receiver android:name="com.biznessapps.pushnotifications.C2DMRegistrationReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+			<intent-filter>
+				<action android:name="com.google.android.c2dm.intent.REGISTRATION">
+				</action>
+				<category android:name="com.app_securities.layout">
+				</category>
+			</intent-filter>
+		</receiver>
+		<receiver android:name="com.biznessapps.pushnotifications.C2DMMessagesReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+			<intent-filter>
+				<action android:name="com.google.android.c2dm.intent.RECEIVE">
+				</action>
+				<category android:name="com.app_securities.layout">
+				</category>
+			</intent-filter>
+		</receiver>
+	</application>
+	<uses-sdk android:minSdkVersion="8" android:targetSdkVersion="12">
+	</uses-sdk>
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+	</uses-permission>
+	<uses-permission android:name="android.permission.READ_PHONE_STATE">
+	</uses-permission>
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+	</uses-permission>
+	<uses-permission android:name="android.permission.CALL_PHONE">
+	</uses-permission>
+	<uses-permission android:name="android.permission.INTERNET">
+	</uses-permission>
+	<uses-permission android:name="android.permission.CAMERA">
+	</uses-permission>
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+	</uses-permission>
+	<uses-permission android:name="android.permission.RECORD_AUDIO">
+	</uses-permission>
+	<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+	</uses-permission>
+	<uses-permission android:name="com.app_securities.layout.permission.C2D_MESSAGE">
+	</uses-permission>
+	<uses-permission android:name="android.permission.SEND_SMS">
+	</uses-permission>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+	</uses-permission>
+	<uses-feature android:name="android.hardware.telephony" android:required="false">
+	</uses-feature>
+	<uses-feature android:name="android.hardware.camera" android:required="false">
+	</uses-feature>
+	<uses-feature android:name="android.hardware.camera.autofocus" android:required="false">
+	</uses-feature>
+	<uses-feature android:name="android.hardware.microphone" android:required="false">
+	</uses-feature>
+	<uses-feature android:name="android.hardware.location" android:required="false">
+	</uses-feature>
+	<uses-feature android:name="android.hardware.location.gps" android:required="false">
+	</uses-feature>
+	<uses-feature android:name="android.hardware.location.network" android:required="false">
+	</uses-feature>
+	<uses-feature android:name="android.hardware.touchscreen" android:required="false">
+	</uses-feature>
+	<uses-feature android:name="android.hardware.screen.landscape" android:required="false">
+	</uses-feature>
+	<permission android:name="com.app_securities.layout.permission.C2D_MESSAGE" android:protectionLevel="2">
+	</permission>
+</manifest>
+

@@ -1,0 +1,41 @@
+# Compiled source #
+###################
+*.com
+*.dll
+*.exe
+*.pyc
+#:*.class
+
+# Packages #
+############
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.dmg
+*.iso
+*.rar
+
+# Logs and databases #
+######################
+
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Scraper downloads #
+#####################
+scraper/downloads/
+
+# Javaoutput #
+#####################
+tools/java_Analysis/javaOutput/
+
+# Stowaway Test output #
+tools/stowaway/output/
+

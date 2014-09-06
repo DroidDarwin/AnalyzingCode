@@ -1,0 +1,53 @@
+
+SimCad 2.2 (April 2013) : University of Saskatchewan, Canada
+
+Found external simcad configuration, overriding defaults...
+
+./scripts/ExtractAndRename function java consistent a408d63f-b407-45a8-8cb8-b79991e53deb%apk output2 
+Starting source extraction process...
+
+Extracting functions from java files in a408d63f-b407-45a8-8cb8-b79991e53deb%apk
+
+*** Warning: 67 source files failed to parse
+
+Applying consistent renaming to extracted functions from java files in a408d63f-b407-45a8-8cb8-b79991e53deb%apk
+
+Source extraction and transformation complete...
+
+Building clone index...
+
+Starting detection process...
+
+Jun 03, 2014 8:50:14 PM ca.usask.cs.srlab.simcad.detection.CloneDetector detectClones
+INFO: Detection started...
+Jun 03, 2014 8:50:14 PM ca.usask.cs.srlab.simcad.detection.CloneDetector detectClones
+INFO: Detection ended...
+Detection process completed...
+
+Generating output xml file...
+
+Copying visualization support files : simcad.xsl
+
+Copying visualization support files : run_prettify.js
+
+Copying visualization support files : prettify.css
+
+Copying visualization support files : main.css
+
+Writing log file...
+
+----------Detection Summary----------
+Date/Time	: 2014/Jun/03 20:50:14
+Source Location	: a408d63f-b407-45a8-8cb8-b79991e53deb%apk/
+Output Location	: output2/
+Source fragment type	: function
+Source transformation	: generous
+Clone type		: Type-1, Type-2, Type-3
+Clone grouping type	: group
+Total source fragment 	: 880
+Total clone fragment	: 185
+Total clone group/pair	: 77
+Pre-Processing time	: 0 min, 20 sec, 755 ms
+Detection time		: 0 min, 0 sec, 428 ms
+Post-Processing time	: 0 min, 0 sec, 38 ms
+

@@ -1,0 +1,69 @@
+TXLC(1)                                                                TXLC(1)
+
+
+
+NAME
+       txlc − TXL Programming Language Compiler (Version 10.6)
+
+SYNOPSIS
+       txlc [ txloptions ] txlfile
+
+DESCRIPTION
+       The  ‘txlc’ command provides a convenient interface for compiling a TXL
+       program to a standalone executable which can be  distributed  and  exe‐
+       cuted  independently of TXL.  The single command argument ‘program.Txl’
+       is the TXL program to be compiled.  The TXL program file must be  named
+       ending in the suffix ‘.Txl’andmustbeeitherinthecurrentworkingdirectory,
+       in the ./Txl subdirectory of the current directory, or  in  the  system
+       TXL library (e.g., /usr/local/lib/txl or C:/windows/txl ).
+
+       txlc  uses  the  TXL  compiler/interpreter (see txl(1) ) to compile the
+       program to a TXL virtual machine byte code file, and then runs the  TXL
+       byte  code converter to produce a C program that is compiled and linked
+       with the TXL virtual machine to produce the output file  filename.x  or
+       filename.exe,  a standalone executable program.  txlc requires that the
+       command line C compiler and linker (normally cc(1) or  gcc(1)  on  Unix
+       and  Linux  systems, xlc(1) on AIX, and the MSVisualC++6.0 command line
+       tools on Windows) are installed and available in  the  current  command
+       line environment.
+
+       All TXL information and error messages from the compile are sent to the
+       terminal via the standard error stream ( /dev/stderr or CONERR$ ).
+
+OPTIONS
+       Command line options of the txlc command are  identical  to  those  for
+       txl(1).
+
+FILES
+       filename.Txl             input TXL program to be compiled (txlfile)
+       filename.CTxl            intermediate TXL virtual machine byte code
+       filename_TXL.c           intermediate C code
+       filename.x               output executable program
+       /usr/local/lib/txl       system TXL program library
+
+BUGS
+       Bugs  should  be  reported  using  the support page on the TXL website,
+       http://www.txl.ca .
+
+SEE ALSO
+       txl(1), ‘‘The TXL Programming Language, version 10.6’’, ‘‘User’s  Guide
+       to the TXL Compiler/Interpreter, version 10.6’’.
+
+AUTHORS
+       Version  10.6  of  TXL  was  designed  and implemented by J.R. Cordy at
+       Queen’s University,  Legasys  Corp.  and  TXL  Software  Research  Inc.
+       between 1994 and 2012.
+
+       TXL  was originally designed by J.R. Cordy and C.D. Halpern‐Hamu at the
+       University of Toronto in 1985, and was originally implemented  by  J.R.
+       Cordy, E.M. Promislow and I.H. Carmichael at Queen’s University between
+       1986 and 1988.  Version 7 was completely redesigned and implemented  by
+       J.R.  Cordy and A. Malton at Queen’s University in 1992, and Version 10
+       was redesigned from the ground up by J.R. Cordy in 2001.
+
+COPYRIGHT
+       Copyright 2012 Queen’s University at Kingston and James R. Cordy.
+
+
+
+                                  5 July 2012                          TXLC(1)
